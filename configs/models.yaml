@@ -1,0 +1,22 @@
+# Model configuration for the hidden-state acceptance probe project.
+#
+# Target and drafter are deliberately independent checkpoints (different
+# param counts, both separately pretrained+instruction-tuned) sharing a
+# tokenizer family, so no vocab remapping is needed for the SD accept/reject
+# rule. See PROGRESS.md "Design decisions" for the EAGLE-vs-independent-LM
+# rationale.
+
+target:
+  name: Qwen/Qwen2.5-7B-Instruct
+  dtype: bfloat16
+  revision: main
+
+drafter:
+  name: Qwen/Qwen2.5-0.5B-Instruct
+  dtype: bfloat16
+  revision: main
+
+device:
+  cuda_visible_devices: "1"   # pinned idle GPU index on the H200 node, checked via nvidia-smi before each session
+
+seed: 0

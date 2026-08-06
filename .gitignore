@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# generated data / activations — large, low-precision binary logs, not checked in
+data/*
+!data/.gitkeep
+
+# model caches if ever pulled locally
+.cache/
+*.safetensors
+*.bin
+
+.DS_Store
