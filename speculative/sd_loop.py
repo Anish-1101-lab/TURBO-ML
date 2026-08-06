@@ -157,9 +157,13 @@ def verify_and_step(target, context_ids: torch.Tensor, draft_ids: torch.Tensor,
 
 def run_speculative_decoding(target, drafter, input_ids: torch.Tensor, vocab_size: int,
                               k: int, max_new_tokens: int, temperature: float,
-                              layer_indices: list, seed: int):
+                              layer_indices: list, seed: int, eos_token_id: int = None):
     """Drive rounds of draft+verify until max_new_tokens have been generated
-    (may overshoot slightly since a round produces 1..k+1 tokens at once)."""
+    (may overshoot slightly since a round produces 1..k+1 tokens at once), or
+    until eos_token_id appears among the tokens actually confirmed this round
+    (accepted drafts + the resample/bonus token) -- checked on the confirmed
+    output, not on raw drafter proposals, since a proposed-but-rejected EOS
+    should not stop generation."""
     generator = torch.Generator(device=input_ids.device).manual_seed(seed)
     context_ids = input_ids
     all_records = []
@@ -172,8 +176,11 @@ def run_speculative_decoding(target, drafter, input_ids: torch.Tensor, vocab_siz
             target, context_ids, draft_ids, q_scalars, q_full_dists, entropies,
             vocab_size, temperature, layer_indices, generator)
         all_records.extend(result.records)
-        n_new = result.new_context_ids.shape[1] - context_ids.shape[1]
+        new_tokens_this_round = result.new_context_ids[0, context_ids.shape[1]:]
+        n_generated += new_tokens_this_round.numel()
         context_ids = result.new_context_ids
-        n_generated += n_new
+
+        if eos_token_id is not None and (new_tokens_this_round == eos_token_id).any():
+            break
 
     return context_ids, all_records

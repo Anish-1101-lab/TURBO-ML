@@ -1,0 +1,14 @@
+# Phase 2 data generation parameters.
+
+# Per-domain drafted-token budget. Split ~evenly across the three domains
+# for a total of 100k. Actual achieved counts may differ slightly per domain
+# (e.g. chat has only 80 unique MT-Bench prompts, so it may need multiple
+# passes with different seeds to hit budget) -- reported in the manifest.
+domains:
+  code: 33334
+  reasoning: 33333
+  chat: 33333
+
+max_new_tokens_per_prompt: 256   # generation cap per prompt before moving on
+max_passes: 20                   # safety cap on re-cycling through a domain's prompt list
+shard_size: 2000                 # records per shard file on disk
