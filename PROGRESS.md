@@ -1,6 +1,6 @@
 # Progress Log — Hidden-State Acceptance Probes for Speculative Decoding
 
-## Status: Phase 0 complete, awaiting go-ahead for Phase 1
+## Status: Phase 1 complete, awaiting go-ahead for Phase 2
 
 ## Compute environment
 - Remote node: H200 node (`103.180.163.218`), user `anish`, home `/mnt/data/anish`.
@@ -69,15 +69,109 @@ Flagged to user at the Phase 0 checkpoint; awaiting confirmation or override.
         over `[:vocab_size]` only, not the padded logit width, or the two
         distributions won't be comparable.
 
+## Phase 1: instrumented SD loop
+
+### Design decisions (flagged)
+
+**No incremental KV cache across rounds.** Every drafting step and every
+verification step recomputes the forward pass over the full sequence so far,
+rather than carrying `past_key_values` across rounds. Real deployments of SD
+use KV caching for throughput, but caching correctly requires cache
+truncation/rollback logic on rejection (drafter cache is "ahead" by the
+rejected tokens; target cache holds keys/values for drafted positions that
+never get confirmed). That bookkeeping is a real source of subtle bugs and
+is hard to hand-verify. Chose correctness-first simplicity for Phase 1/2 at
+the ~100k-token small-scale stage; full recompute is computationally fine at
+this scale on an H200. Flagging that this may need revisiting for
+throughput if Phase 2 turns out too slow, but not building the caching
+complexity preemptively.
+
+**Layer tap point:** HF's `output_hidden_states=True`, i.e. the residual
+stream immediately after each decoder block (standard, unambiguous
+convention; `hidden_states[0]` is the embedding output, `hidden_states[i]`
+is the output of decoder block `i`).
+
+**Layer stride = 4** (target has 28 layers -> logs layers
+`[4, 8, 12, 16, 20, 24, 28]`, 7 points). Since `output_hidden_states=True`
+computes all layers regardless (no compute saved by a stride, this is a
+storage/IO-only choice), stride 4 was picked as a balance: enough
+resolution for an AUROC-vs-depth curve, without logging all 28 layers,
+which would not stay budget-conscious once Phase 2 scales beyond 100k
+tokens. See `configs/sd_config.yaml` for the exact rationale inline.
+
+**Position indexing for a drafted token.** For a round with existing
+context length `n` and `k` drafted tokens fed to the target in one parallel
+forward pass over `[context, x_1..x_k]`: drafted token `x_{i+1}` (1-indexed
+per the paper) is verified using the target's output at 0-indexed input
+position `n - 1 + i`. This is exactly the same conditioning point the
+drafter used to sample `x_{i+1}`, and it's the intermediate-hidden-state
+tap the probe hypothesis is about ("decodable before the forward pass
+finishes" = the layer-k hidden state at that position, before the residual
+stream has passed through the remaining `28-k` blocks). Verified against a
+completely independent recomputation, see below.
+
+**Sampling temperature = 1.0**, shared between drafter (for proposing +
+computing q) and target (for computing p). Plain softmax sampling, no
+top-k/top-p truncation, to keep the accept-reject rule exactly as specified
+(temperature-truncated sampling changes what distribution is being
+compared and would need its own correctness argument).
+
+**Label vs. stochastic outcome.** `min(1, p(x)/q(x))` is logged for every
+one of the k drafted tokens in a round, regardless of where the sequential
+accept/reject walk actually stops — it's a pure function of p and q, both
+already computed by the one parallel target forward pass, so there's no
+need to discard "would-have-been-rejected-anyway" tokens as probe examples.
+The actual stochastic `accepted` bool is also logged, but only for
+bookkeeping/sanity checks, never as a training target.
+
+**Token-difficulty proxy**: drafter entropy at each drafting step is logged
+now (cheap, already computed in the drafting loop) even though it's not
+consumed until Phase 2/3 analysis.
+
+### Implementation
+- `speculative/sd_loop.py`: `draft_tokens()` (drafting phase),
+  `verify_and_step()` (one target forward pass + accept/reject/resample
+  walk + logging), `run_speculative_decoding()` (drives rounds to
+  `max_new_tokens`). Small, single-purpose functions per file, no library
+  SD shortcuts used anywhere.
+- `configs/sd_config.yaml`: `k=4`, `temperature=1.0`, `layer_stride=4`,
+  `seed=0`.
+
+### Validation (`scripts/01_validate_sd.py`)
+Ran the loop on 3 short prompts (factual, code, arithmetic) and, for every
+drafted token, independently recomputed q(x) and p(x) via **separate fresh
+forward passes** (no reuse of any loop-internal state/tensors) — different
+code path, same models, to catch indexing/slicing bugs rather than
+rubber-stamp the same computation twice.
+
+**Result: 7/7 records matched (0 mismatches)**, e.g.:
+```
+prompt: 'The capital of France is'
+   tok  q(logged)  q(indep)  p(logged)  p(indep)   label  accept
+' Paris'    0.2719    0.2719     0.4994    0.4994  1.0000    True
+ '.\n\n'    0.0692    0.0692     0.0176    0.0176  0.2543   False
+```
+Full output in the checkpoint report to user.
+
+A smoke-test full generation (40 tokens, prompt "The capital of France is")
+produced a 59.46% acceptance rate over 37 drafted-token records. The
+generated continuation wanders off-topic after the correct initial answer
+("...is Paris. ..." then unrelated text) — expected at temperature=1.0 with
+no repetition penalty on a short factual prompt with nothing more
+determinate to say, not a bug signal (the correctness check above is what
+matters here, not sample quality).
+
 ## Next
-- Phase 1: instrumented SD loop (draft -> parallel verify -> accept/reject/
-  resample), with per-token hidden-state logging at a layer stride (TBD,
-  will justify against memory budget), validated by hand against a manually
-  computed reference on a handful of prompts.
+- Phase 2: data generation over HumanEval/MBPP, GSM8K, and a chat set
+  (~100k drafted tokens total), storing compact per-token records (layer
+  subset activations in fp16, token id, p, q, label, domain, drafter
+  entropy) to disk.
 
 ## Open questions for user
-- Confirm or override the EAGLE-vs-independent-drafter decision above.
+- Confirm or override the EAGLE-vs-independent-drafter decision (Phase 0).
 - Confirm Qwen2.5-7B/0.5B pair, or prefer a different target model family.
+- Confirm no-KV-cache tradeoff (Phase 1) is acceptable, or prioritize adding
+  caching now if throughput at 100k tokens looks likely to be a problem.
 
 ## Blockers
 - None currently.

@@ -1,0 +1,15 @@
+# Speculative decoding run parameters (Phase 1/2).
+
+k: 4                  # tokens drafted per round
+temperature: 1.0      # shared sampling temperature for both drafter (q) and target (p) --
+                       # required for the accept-reject math's losslessness guarantee to hold
+max_new_tokens: 40    # per prompt, for Phase 1 validation runs (Phase 2 will override)
+seed: 0
+
+layer_stride: 4       # log target hidden states every 4th decoder layer (of 28 total)
+                       # -> layers [4, 8, 12, 16, 20, 24, 28]. Rationale: output_hidden_states=True
+                       # computes all layers regardless (no compute saved by a stride), so this is
+                       # a pure storage/IO choice. At 100k tokens this is a non-issue either way
+                       # (~5GB for stride 4 in fp16 vs ~20GB for all 28 layers), but establishing
+                       # the subset-logging pattern now matters for later, larger-scale runs where
+                       # logging all layers would not stay budget-conscious.
