@@ -1,6 +1,6 @@
 # Progress Log — Hidden-State Acceptance Probes for Speculative Decoding
 
-## Status: Phase 4 complete (negative result) -- awaiting user decision on Phase 5
+## Status: Causal-check thread closed (Phase 4 + 4b, both negative) -- awaiting user decision on whether/how to proceed to Phase 5
 
 ## Compute environment
 - Remote node: H200 node (`103.180.163.218`), user `anish`, home `/mnt/data/anish`.
@@ -474,14 +474,105 @@ stream.
 - `scripts/05_causal_check.py`: orchestrates generation + logging.
 - `scripts/06_analyze_causal.py`: correlation analysis + scatter plot.
 
+## Phase 4 follow-up: position-restricted ablation
+
+Re-ran the exact same causal check as Phase 4, with one change: the ablation
+hook (`probes/ablation.py`'s `AblationHook`, now takes an optional
+`target_positions` list) restricts the mean-ablation to only the single
+sequence position being verified for each drafted token, instead of every
+position in the sequence at once. Addresses the "diffuse intervention"
+caveat flagged at the end of Phase 4. Same probe checkpoint (layer 24,
+linear), same random-direction control, same prompts/seeds/generator
+call order as the original run (`scripts/07_causal_check_positional.py`,
+new `causal_verify_and_step_positional` in `probes/causal_verify.py`) --
+clean-pass generation trajectory is bit-for-bit identical to Phase 4's, so
+the two result sets are directly comparable. Costs ~3x the forward passes
+per record (a separate ablated pass per drafted position rather than one
+batched pass per round: `1 + 2k` passes per round of `k=4` vs. 3 before).
+
+Run remotely on the H200 node, GPU 4. `analysis/phase4_positional/`.
+
+### Results (still negative)
+
+Same 6,736 records (60 prompts, same trajectory as Phase 4).
+
+| | probe direction | random direction (control) |
+|---|---|---|
+| Pearson r | -0.0155 (p=0.204) | -0.0129 (p=0.290) |
+| Spearman rho | -0.0328 (p=0.007) | -0.0009 (p=0.939) |
+| mean \|delta p(x)\| | 0.00277 | 0.00228 |
+
+The Pearson sign now matches the causal hypothesis's predicted direction
+(negative, unlike Phase 4's wrong-signed +0.028), and Spearman rho is
+negative and statistically significant this time (p=0.007, vs. random's
+p=0.94) -- so restricting the ablation to the verification position did
+change the picture slightly, in the hypothesized direction, not just noise
+in a random direction. But this doesn't upgrade the finding to a positive
+result:
+1. **Effect size is still negligible** -- rho=-0.033 explains essentially
+   none of the variance; mean |delta p(x)| for the real direction (0.00277)
+   is barely above the random control (0.00228), same order of magnitude
+   as Phase 4's diffuse version.
+2. **Pearson r is not significant** (p=0.204) -- only Spearman clears
+   p<0.05, and by a modest margin, not a decisive break from the control.
+3. **Per-domain breakdown still undercuts the story**: in the code domain
+   the random control again shows a larger-magnitude, more significant
+   effect (r=-0.056, p=0.009) than the real probe direction (r=-0.019,
+   p=0.373) -- the same inversion Phase 4 found, unresolved by
+   position-restriction. Reasoning domain even flips sign for the random
+   control (r=+0.012) vs. probe (r=-0.013), both non-significant.
+4. **Scatter plots are visually indistinguishable** between the two
+   conditions (`analysis/phase4_positional/causal_scatter.png`) -- both
+   are flat, near-zero-slope clouds with the same spread, not "probe
+   direction shows a real trend, random direction is flat."
+
+**Interpretation**: the position-restriction fix ruled out "cross-position
+attention dilution" as the reason Phase 4 came back negative -- with that
+confound removed, the result is still negative, just with a technically-
+correct-signed but practically negligible correlation instead of a
+wrong-signed one. This strengthens (not weakens) Phase 4's original
+conclusion: the specific linear direction the probe reads from does not
+appear to be causally load-bearing for the target's actual verification
+computation, at least not via mean-ablation of this direction, at this
+layer. Combined with Phase 3's clean AUROC results, the overall picture
+remains "decodable but not shown to be the causal mechanism."
+
+## Causal check — final summary
+
+**What was tested**: whether the Phase 3 probe's layer-24 linear direction
+is *causally load-bearing* for the target model's actual verification
+computation (not just correlated with/predictive of it) -- via mean-ablation
+of that direction with a random-direction control matched on mechanics.
+
+**Phase 4 (diffuse, whole-sequence ablation)**: negative. Pearson r =
++0.028 (p=0.022) -- wrong sign versus the hypothesis's predicted negative
+correlation. Effect size (mean |delta p(x)| = 0.0031) barely
+distinguishable from the random control (0.0025). Code domain showed the
+random control with a *larger* effect than the real probe direction.
+
+**Phase 4b (position-restricted ablation, addressing Phase 4's main
+caveat -- that ablating every sequence position at once could dilute a
+real localized effect)**: sign flipped to the hypothesis-predicted
+direction and reached significance on Spearman (rho = -0.033, p=0.007,
+vs. random control's rho = -0.001, p=0.94), but Pearson stayed
+non-significant (r = -0.016, p=0.204), effect size remained negligible
+(mean |delta p(x)| = 0.0028 vs. control's 0.0023 -- same order of
+magnitude as Phase 4), and the code-domain inversion persisted (random
+control r=-0.056, p=0.009 vs. probe direction r=-0.019, p=0.373).
+
+**Net conclusion**: ruling out cross-position dilution did not reveal a
+hidden strong effect -- this constitutes a well-controlled negative
+result, not an inconclusive one. The probe's layer-24 direction is
+linearly decodable and predictive of accept/reject outcomes (Phase 3) but
+is not shown to be causally load-bearing for the target's own
+verification computation, under either ablation design tested (Phase 4 +
+Phase 4b).
+
+**This is the final result for the causal-check thread.** No further
+ablation variants (different layers, interchange/activation patching, or
+otherwise) are planned unless explicitly requested later.
+
 ## Open questions for user
-- **Phase 4 result was negative — decide how to proceed**: treat as the
-  reported causal-check result and move on (Phase 5 is conditional on
-  early saturation, which Phase 3 showed, but the brief also wants a
-  causal check before gating verification on this signal -- worth
-  explicitly deciding whether a negative causal result changes the
-  Phase 5 go/no-go), or run the more targeted single-position-ablation
-  follow-up flagged above first.
 - Confirm or override the EAGLE-vs-independent-drafter decision (Phase 0).
 - Confirm Qwen2.5-7B/0.5B pair, or prefer a different target model family.
 - Confirm no-KV-cache tradeoff (Phase 1) is acceptable, or prioritize adding

@@ -33,14 +33,21 @@ def random_direction(hidden_dim: int, seed: int) -> torch.Tensor:
 class AblationHook:
     """Registers on model.model.layers[layer_idx_0based]; while `active` is
     True, ablates `direction` (unit vector, raw hidden-state space) from
-    every position in that layer's output. Toggle `active` instead of
-    add/removing the hook repeatedly, so clean/ablated forward passes can
-    reuse one hook object."""
+    that layer's output. Toggle `active` instead of add/removing the hook
+    repeatedly, so clean/ablated forward passes can reuse one hook object.
+
+    `target_positions`: None (default) ablates every position in the
+    sequence -- the original Phase 4 "diffuse" experiment. Set to a list
+    of 0-indexed sequence positions to restrict the ablation to only those
+    positions (all other positions pass through unmodified) -- the Phase 4
+    position-restricted follow-up, which avoids ablating positions other
+    than the one actually being measured."""
 
     def __init__(self, layer_module, direction: torch.Tensor, mean_proj: float, device):
         self.direction = direction.to(device)
         self.mean_proj = mean_proj
         self.active = False
+        self.target_positions = None
         self.handle = layer_module.register_forward_hook(self._hook)
 
     def _hook(self, module, inputs, output):
@@ -49,7 +56,13 @@ class AblationHook:
         h = output
         direction = self.direction.to(h.dtype)
         proj = (h * direction).sum(dim=-1, keepdim=True)  # [.., 1]
-        return h + (self.mean_proj - proj) * direction
+        ablated = h + (self.mean_proj - proj) * direction
+        if self.target_positions is None:
+            return ablated
+        mask = torch.zeros(h.shape[1], dtype=torch.bool, device=h.device)
+        mask[self.target_positions] = True
+        mask = mask.view(1, -1, 1)
+        return torch.where(mask, ablated, h)
 
     def remove(self):
         self.handle.remove()
