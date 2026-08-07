@@ -1,0 +1,26 @@
+# Phase 3 probe training configuration.
+
+data_dir: data/phase2_small
+out_dir: analysis/phase3
+use_gpu: false   # CPU only -- probes are tiny relative to data size, and
+                  # avoids touching shared GPUs that other tenants are using
+seed: 0
+
+split:
+  train_frac: 0.7
+  val_frac: 0.15
+  test_frac: 0.15
+
+train:
+  batch_size: 1024
+  lr: 0.001
+  weight_decay: 0.0001
+  max_epochs: 100
+  patience: 10   # early stop on val AUROC plateau
+
+mlp:
+  hidden_dim: 256
+  dropout: 0.1
+
+calibration:
+  n_bins: 15

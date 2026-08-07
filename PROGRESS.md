@@ -1,6 +1,6 @@
 # Progress Log — Hidden-State Acceptance Probes for Speculative Decoding
 
-## Status: Phase 2 complete, awaiting go-ahead for Phase 3
+## Status: Phase 3 complete, awaiting go-ahead for Phase 4
 
 ## Compute environment
 - Remote node: H200 node (`103.180.163.218`), user `anish`, home `/mnt/data/anish`.
@@ -248,6 +248,119 @@ is most informative to look at in Phase 3.
   chat-domain pass-suffix caveat above handled). Report AUROC + calibration
   (ECE, reliability diagrams) per layer, per domain, for both probe types.
 
+## Phase 3: probe training
+
+### Design decisions (flagged)
+
+**Training target vs. evaluation target are deliberately different.**
+Probes are trained with soft-label `BCEWithLogitsLoss` against the
+deterministic `min(1,p/q)` label (as required -- avoids the coin-flip
+label-noise problem). But AUROC and calibration (ECE, reliability
+diagrams) are inherently about how well a predicted probability matches
+*realized* binary outcomes -- there's no other honest way to define them.
+So evaluation uses the actual stochastic `accepted` outcome as ground
+truth. This is the standard way any probabilistic forecast gets validated
+(e.g. a weather model's rain probability is checked against whether it
+actually rained, not against some internal deterministic proxy). Not an
+inconsistency -- training avoids noisy labels, evaluation necessarily uses
+realized outcomes because that's what AUROC/calibration mean.
+
+**Pooled-domain probes, not per-domain.** One probe per (layer, probe
+type) trained on data pooled across all three domains, then evaluated with
+results sliced by domain. Chosen over training separate per-domain probes
+because the project's hypothesis is about whether the accept/reject signal
+is decodable at all (a general claim), and pooling directly tests whether
+that signal is domain-general vs. domain-specific by looking at the
+per-domain slice of a domain-general probe's performance. Flagging as a
+default -- happy to also train per-domain probes as a follow-up comparison
+if useful.
+
+**Features standardized per layer** (zero mean, unit variance, fit on
+train split only, applied to val/test) before both probe types -- residual
+stream activation norms are known to grow with depth in transformers, so
+this avoids layer-to-layer comparisons being confounded by raw scale
+rather than genuine signal.
+
+**Split by prompt** using `probes/splits.py`, handling the chat-domain
+pass-suffix caveat flagged in Phase 2 (`chat_12_pass0` and `chat_12_pass1`
+collapse to the same split key so they can't land in different splits).
+70/15/15 train/val/test, stratified by domain. 389 unique prompts total
+(155 code, 154 reasoning, 80 chat -- chat's low count is the known
+consequence of only 80 unique MT-Bench questions, cycled across passes).
+
+**MLP architecture**: single hidden layer, 256 units, ReLU, dropout 0.1 --
+kept deliberately small relative to ~70k training rows, meant as a
+nonlinearity check against the linear probe, not a capacity race.
+
+**Compute**: ran entirely on CPU on the H200 node (192 cores, 2TB RAM
+available) rather than GPU. Probes are tiny relative to the stored
+activations (no forward pass through the 7B/0.5B models needed at all,
+just the already-extracted hidden states), and the node's GPUs were
+occupied by other tenants' jobs at the time -- CPU was both sufficient and
+avoided touching shared GPU resources unnecessarily. Full run (14 probes:
+7 layers x {linear, mlp}) took ~4.5 minutes.
+
+### Results
+
+`analysis/phase3/results.json`, `reliability.json`, plots in
+`analysis/phase3/plots/`.
+
+**AUROC vs. depth** (`auroc_vs_depth.png`): AUROC rises steadily from
+layer 4 through layer 24, then **flattens and slightly declines by layer
+28 (the final layer)** -- for both probe types and consistently across
+domains. Peak overall AUROC: linear 0.846 (layer 24), MLP 0.859 (layer
+24), vs. final-layer (28) values of 0.838 (linear) and 0.855 (MLP). This
+is a real, if modest, instance of the project's core hypothesis: the
+accept/reject signal saturates *before* the final layer rather than
+requiring the full forward pass.
+
+Domain ordering is consistent at every layer: **reasoning > code > chat**
+in AUROC (e.g. at layer 24, MLP: reasoning 0.873, code 0.861, chat 0.803).
+Chat is the hardest domain to predict from hidden states by a wide margin,
+consistent with its lower acceptance rate and higher drafter entropy from
+Phase 2.
+
+MLP outperforms linear at every single layer/domain combination, by a
+fairly consistent ~0.01-0.02 AUROC margin -- a real but modest nonlinearity
+gain. The bulk of the discriminative signal is already linearly decodable;
+the MLP is a refinement, not a qualitative jump.
+
+**Calibration vs. depth** (`ece_vs_depth.png`): a much starker difference
+than AUROC. Linear probes are **poorly calibrated** (ECE ~0.25-0.28,
+roughly flat across all layers/domains) despite having decent AUROC.
+MLP probes are **well-calibrated** (ECE ~0.01-0.03) at every layer.
+Reliability diagrams (`reliability_diagrams.png`, layers 4/16/28) confirm
+this visually: linear-probe curves sit well above the diagonal across most
+of the probability range (the probe *underestimates* acceptance
+probability -- e.g. at predicted prob. 0.5, empirical accept rate is often
+~0.7-0.8), while MLP curves track the diagonal closely at every depth
+shown. **Practical implication for Phase 5** (if we get there): a linear
+probe's raw output would need explicit recalibration (e.g. Platt
+scaling/temperature scaling) before being used as a "definitely-accept"
+confidence threshold; the MLP's output is closer to usable as-is.
+
+### Implementation
+- `probes/data.py`: shard loader, `split_key` construction (pass-suffix
+  stripped).
+- `probes/splits.py`: prompt-level, domain-stratified split.
+- `probes/models.py`: `LinearProbe`, `MLPProbe`.
+- `probes/train.py`: soft-BCE training loop, early-stopped on val AUROC
+  (evaluated against `accepted`, matching the eval/train-target split
+  above).
+- `probes/metrics.py`: AUROC, ECE, reliability-diagram bin stats.
+- `scripts/03_train_probes.py`: orchestrates all (layer x probe type)
+  combinations, saves `results.json` (per layer/probe/domain metrics) +
+  `reliability.json` (calibration bin data) + probe weights.
+- `scripts/04_plot_results.py`: generates the three plots above from
+  `results.json`/`reliability.json`.
+
+## Next
+- Phase 4: causal check (activation patching / ablation) on the
+  best-performing layer/probe (layer 24, MLP looks like the natural
+  candidate given the results above) -- test whether the decoded signal is
+  causally used by the target's own verification outcome, or merely
+  correlated with it.
+
 ## Open questions for user
 - Confirm or override the EAGLE-vs-independent-drafter decision (Phase 0).
 - Confirm Qwen2.5-7B/0.5B pair, or prefer a different target model family.
@@ -257,9 +370,26 @@ is most informative to look at in Phase 3.
   scaling to millions of tokens later).
 - Confirm chat-domain first-turn-only simplification (Phase 2) is
   acceptable, or want multi-turn MT-Bench prompts in a future data pull.
+- Confirm pooled-domain probe training (Phase 3) is the right default, or
+  want per-domain probes trained as a comparison.
+- Confirm layer 24 + MLP as the target for Phase 4's causal check, or
+  prefer a different layer/probe choice.
 
 ## Blockers
-- None currently. (Separately, mid-session: college wifi was blocking
-  outbound port 22 to the remote nodes; user is setting up Tailscale as a
-  more robust access path. Not a project blocker -- SSH access still works
-  from networks that don't block port 22.)
+- None currently.
+
+## Incident log (not a project blocker, but worth keeping a record of)
+Mid-Phase-2/3, while troubleshooting SSH connectivity from a network that
+blocks port 22, an attempt to add a secondary SSH port (9000) via a
+systemd socket override on the H200 node failed partway through
+(`systemctl restart ssh.socket` returned a failed job) and left the node
+with **no SSH listener on any port** -- affecting all tenants of that
+shared box, not just this project. Root cause: `ssh.socket` is
+systemd-socket-activated, so `sshd_config`'s `Port` directive doesn't
+control the actual listening ports; a socket-unit override is required,
+and restarting an already-active socket unit has a stop/rebind race that
+failed here. Recovered via the machine's out-of-band console (not SSH,
+since SSH itself was down) once the node's admin (Tarang) applied the
+revert. No data loss, no other tenants' running jobs affected (only new
+connections were blocked). Full command sequence and revert steps are in
+git history / this session's transcript if ever needed for a postmortem.

@@ -1,0 +1,562 @@
+[
+  {
+    "layer": 4,
+    "probe_type": "linear",
+    "val_auroc": 0.7770472365196269,
+    "test_auroc": 0.784369887413416,
+    "test_ece": 0.27394588925749036,
+    "domain": "overall",
+    "n_epochs": 13,
+    "elapsed_sec": 6.896609783172607
+  },
+  {
+    "layer": 4,
+    "probe_type": "linear",
+    "val_auroc": 0.7770472365196269,
+    "test_auroc": 0.7504128424582277,
+    "test_ece": 0.28232922882976375,
+    "domain": "code",
+    "n_epochs": 13,
+    "elapsed_sec": 6.896609783172607
+  },
+  {
+    "layer": 4,
+    "probe_type": "linear",
+    "val_auroc": 0.7770472365196269,
+    "test_auroc": 0.7850961649712084,
+    "test_ece": 0.26660613346577156,
+    "domain": "reasoning",
+    "n_epochs": 13,
+    "elapsed_sec": 6.896609783172607
+  },
+  {
+    "layer": 4,
+    "probe_type": "linear",
+    "val_auroc": 0.7770472365196269,
+    "test_auroc": 0.7169632843001148,
+    "test_ece": 0.27330600147525075,
+    "domain": "chat",
+    "n_epochs": 13,
+    "elapsed_sec": 6.896609783172607
+  },
+  {
+    "layer": 4,
+    "probe_type": "mlp",
+    "val_auroc": 0.7940223259983574,
+    "test_auroc": 0.799748950151224,
+    "test_ece": 0.012321424745039982,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 42.86200451850891
+  },
+  {
+    "layer": 4,
+    "probe_type": "mlp",
+    "val_auroc": 0.7940223259983574,
+    "test_auroc": 0.779420838331677,
+    "test_ece": 0.01722225230258545,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 42.86200451850891
+  },
+  {
+    "layer": 4,
+    "probe_type": "mlp",
+    "val_auroc": 0.7940223259983574,
+    "test_auroc": 0.8086592084301214,
+    "test_ece": 0.021557892413437404,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 42.86200451850891
+  },
+  {
+    "layer": 4,
+    "probe_type": "mlp",
+    "val_auroc": 0.7940223259983574,
+    "test_auroc": 0.7304934471437429,
+    "test_ece": 0.025256997850374857,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 42.86200451850891
+  },
+  {
+    "layer": 8,
+    "probe_type": "linear",
+    "val_auroc": 0.7975286764682021,
+    "test_auroc": 0.8066835298099644,
+    "test_ece": 0.26739856186550626,
+    "domain": "overall",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7704296112060547
+  },
+  {
+    "layer": 8,
+    "probe_type": "linear",
+    "val_auroc": 0.7975286764682021,
+    "test_auroc": 0.7789576575419428,
+    "test_ece": 0.26445739561481346,
+    "domain": "code",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7704296112060547
+  },
+  {
+    "layer": 8,
+    "probe_type": "linear",
+    "val_auroc": 0.7975286764682021,
+    "test_auroc": 0.8112970033553164,
+    "test_ece": 0.2681488401168026,
+    "domain": "reasoning",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7704296112060547
+  },
+  {
+    "layer": 8,
+    "probe_type": "linear",
+    "val_auroc": 0.7975286764682021,
+    "test_auroc": 0.7499902968564801,
+    "test_ece": 0.2695715336902177,
+    "domain": "chat",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7704296112060547
+  },
+  {
+    "layer": 8,
+    "probe_type": "mlp",
+    "val_auroc": 0.8136196090660273,
+    "test_auroc": 0.8247682982691507,
+    "test_ece": 0.0158188179701814,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 43.29472637176514
+  },
+  {
+    "layer": 8,
+    "probe_type": "mlp",
+    "val_auroc": 0.8136196090660273,
+    "test_auroc": 0.8103687764020717,
+    "test_ece": 0.017970035782519184,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 43.29472637176514
+  },
+  {
+    "layer": 8,
+    "probe_type": "mlp",
+    "val_auroc": 0.8136196090660273,
+    "test_auroc": 0.8324098648083376,
+    "test_ece": 0.02172951255589723,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 43.29472637176514
+  },
+  {
+    "layer": 8,
+    "probe_type": "mlp",
+    "val_auroc": 0.8136196090660273,
+    "test_auroc": 0.7669352198234726,
+    "test_ece": 0.025360527349101134,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 43.29472637176514
+  },
+  {
+    "layer": 12,
+    "probe_type": "linear",
+    "val_auroc": 0.808277398567437,
+    "test_auroc": 0.8147305311126326,
+    "test_ece": 0.27052446650588663,
+    "domain": "overall",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7222743034362793
+  },
+  {
+    "layer": 12,
+    "probe_type": "linear",
+    "val_auroc": 0.808277398567437,
+    "test_auroc": 0.795224348829817,
+    "test_ece": 0.2591701204735086,
+    "domain": "code",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7222743034362793
+  },
+  {
+    "layer": 12,
+    "probe_type": "linear",
+    "val_auroc": 0.808277398567437,
+    "test_auroc": 0.8285310478021343,
+    "test_ece": 0.2766761330971494,
+    "domain": "reasoning",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7222743034362793
+  },
+  {
+    "layer": 12,
+    "probe_type": "linear",
+    "val_auroc": 0.808277398567437,
+    "test_auroc": 0.7530140285892757,
+    "test_ece": 0.2762146301747312,
+    "domain": "chat",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7222743034362793
+  },
+  {
+    "layer": 12,
+    "probe_type": "mlp",
+    "val_auroc": 0.8250818659751586,
+    "test_auroc": 0.8290310681085282,
+    "test_ece": 0.015310322420863238,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 39.59665870666504
+  },
+  {
+    "layer": 12,
+    "probe_type": "mlp",
+    "val_auroc": 0.8250818659751586,
+    "test_auroc": 0.8255452297148449,
+    "test_ece": 0.016944761000488,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 39.59665870666504
+  },
+  {
+    "layer": 12,
+    "probe_type": "mlp",
+    "val_auroc": 0.8250818659751586,
+    "test_auroc": 0.8369957012789362,
+    "test_ece": 0.020473079124093067,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 39.59665870666504
+  },
+  {
+    "layer": 12,
+    "probe_type": "mlp",
+    "val_auroc": 0.8250818659751586,
+    "test_auroc": 0.7693270861675634,
+    "test_ece": 0.027544930948481445,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 39.59665870666504
+  },
+  {
+    "layer": 16,
+    "probe_type": "linear",
+    "val_auroc": 0.8169331231403241,
+    "test_auroc": 0.8280497178675821,
+    "test_ece": 0.2645346375381416,
+    "domain": "overall",
+    "n_epochs": 13,
+    "elapsed_sec": 0.72318434715271
+  },
+  {
+    "layer": 16,
+    "probe_type": "linear",
+    "val_auroc": 0.8169331231403241,
+    "test_auroc": 0.8161732715213827,
+    "test_ece": 0.2513075882627832,
+    "domain": "code",
+    "n_epochs": 13,
+    "elapsed_sec": 0.72318434715271
+  },
+  {
+    "layer": 16,
+    "probe_type": "linear",
+    "val_auroc": 0.8169331231403241,
+    "test_auroc": 0.8370911097464377,
+    "test_ece": 0.26782227469552305,
+    "domain": "reasoning",
+    "n_epochs": 13,
+    "elapsed_sec": 0.72318434715271
+  },
+  {
+    "layer": 16,
+    "probe_type": "linear",
+    "val_auroc": 0.8169331231403241,
+    "test_auroc": 0.7738726357088287,
+    "test_ece": 0.2743879830017986,
+    "domain": "chat",
+    "n_epochs": 13,
+    "elapsed_sec": 0.72318434715271
+  },
+  {
+    "layer": 16,
+    "probe_type": "mlp",
+    "val_auroc": 0.8321270854742641,
+    "test_auroc": 0.8417903744771414,
+    "test_ece": 0.018610910695970158,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 32.22850513458252
+  },
+  {
+    "layer": 16,
+    "probe_type": "mlp",
+    "val_auroc": 0.8321270854742641,
+    "test_auroc": 0.8342800800916073,
+    "test_ece": 0.018663464889101568,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 32.22850513458252
+  },
+  {
+    "layer": 16,
+    "probe_type": "mlp",
+    "val_auroc": 0.8321270854742641,
+    "test_auroc": 0.8476488754794899,
+    "test_ece": 0.02018599528819327,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 32.22850513458252
+  },
+  {
+    "layer": 16,
+    "probe_type": "mlp",
+    "val_auroc": 0.8321270854742641,
+    "test_auroc": 0.7913414454930475,
+    "test_ece": 0.030654552198512472,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 32.22850513458252
+  },
+  {
+    "layer": 20,
+    "probe_type": "linear",
+    "val_auroc": 0.824867818914313,
+    "test_auroc": 0.8405851264455773,
+    "test_ece": 0.26732933549912563,
+    "domain": "overall",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7158675193786621
+  },
+  {
+    "layer": 20,
+    "probe_type": "linear",
+    "val_auroc": 0.824867818914313,
+    "test_auroc": 0.828695506413836,
+    "test_ece": 0.2631129695951824,
+    "domain": "code",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7158675193786621
+  },
+  {
+    "layer": 20,
+    "probe_type": "linear",
+    "val_auroc": 0.824867818914313,
+    "test_auroc": 0.8429421764166645,
+    "test_ece": 0.2685908873988315,
+    "domain": "reasoning",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7158675193786621
+  },
+  {
+    "layer": 20,
+    "probe_type": "linear",
+    "val_auroc": 0.824867818914313,
+    "test_auroc": 0.7932500621167051,
+    "test_ece": 0.2702702739745055,
+    "domain": "chat",
+    "n_epochs": 13,
+    "elapsed_sec": 0.7158675193786621
+  },
+  {
+    "layer": 20,
+    "probe_type": "mlp",
+    "val_auroc": 0.845343387456327,
+    "test_auroc": 0.8557330609918566,
+    "test_ece": 0.013720477090503096,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 28.35657048225403
+  },
+  {
+    "layer": 20,
+    "probe_type": "mlp",
+    "val_auroc": 0.845343387456327,
+    "test_auroc": 0.8486417508676762,
+    "test_ece": 0.01802659479765602,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 28.35657048225403
+  },
+  {
+    "layer": 20,
+    "probe_type": "mlp",
+    "val_auroc": 0.845343387456327,
+    "test_auroc": 0.8680775015797577,
+    "test_ece": 0.017583812244981536,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 28.35657048225403
+  },
+  {
+    "layer": 20,
+    "probe_type": "mlp",
+    "val_auroc": 0.845343387456327,
+    "test_auroc": 0.8066713341274983,
+    "test_ece": 0.0237660178327509,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 28.35657048225403
+  },
+  {
+    "layer": 24,
+    "probe_type": "linear",
+    "val_auroc": 0.8328036354411215,
+    "test_auroc": 0.8461798122422539,
+    "test_ece": 0.25555169358342555,
+    "domain": "overall",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7640895843505859
+  },
+  {
+    "layer": 24,
+    "probe_type": "linear",
+    "val_auroc": 0.8328036354411215,
+    "test_auroc": 0.8402041606888124,
+    "test_ece": 0.26034627948438044,
+    "domain": "code",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7640895843505859
+  },
+  {
+    "layer": 24,
+    "probe_type": "linear",
+    "val_auroc": 0.8328036354411215,
+    "test_auroc": 0.8613287765110049,
+    "test_ece": 0.2652189219646447,
+    "domain": "reasoning",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7640895843505859
+  },
+  {
+    "layer": 24,
+    "probe_type": "linear",
+    "val_auroc": 0.8328036354411215,
+    "test_auroc": 0.7938657555995431,
+    "test_ece": 0.24181056597355843,
+    "domain": "chat",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7640895843505859
+  },
+  {
+    "layer": 24,
+    "probe_type": "mlp",
+    "val_auroc": 0.8512989843001935,
+    "test_auroc": 0.8590961759659951,
+    "test_ece": 0.011319597913796886,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 37.78678750991821
+  },
+  {
+    "layer": 24,
+    "probe_type": "mlp",
+    "val_auroc": 0.8512989843001935,
+    "test_auroc": 0.8612341698297763,
+    "test_ece": 0.012397924712163324,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 37.78678750991821
+  },
+  {
+    "layer": 24,
+    "probe_type": "mlp",
+    "val_auroc": 0.8512989843001935,
+    "test_auroc": 0.8734709280075472,
+    "test_ece": 0.017885056249797335,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 37.78678750991821
+  },
+  {
+    "layer": 24,
+    "probe_type": "mlp",
+    "val_auroc": 0.8512989843001935,
+    "test_auroc": 0.8032981233622835,
+    "test_ece": 0.019598247207412357,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 37.78678750991821
+  },
+  {
+    "layer": 28,
+    "probe_type": "linear",
+    "val_auroc": 0.8278163355778835,
+    "test_auroc": 0.8380055450107677,
+    "test_ece": 0.2509609960467813,
+    "domain": "overall",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7782902717590332
+  },
+  {
+    "layer": 28,
+    "probe_type": "linear",
+    "val_auroc": 0.8278163355778835,
+    "test_auroc": 0.8378707107227289,
+    "test_ece": 0.2608451655127422,
+    "domain": "code",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7782902717590332
+  },
+  {
+    "layer": 28,
+    "probe_type": "linear",
+    "val_auroc": 0.8278163355778835,
+    "test_auroc": 0.8629843626233769,
+    "test_ece": 0.26112944078849976,
+    "domain": "reasoning",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7782902717590332
+  },
+  {
+    "layer": 28,
+    "probe_type": "linear",
+    "val_auroc": 0.8278163355778835,
+    "test_auroc": 0.7727815711263641,
+    "test_ece": 0.23177433406496653,
+    "domain": "chat",
+    "n_epochs": 14,
+    "elapsed_sec": 0.7782902717590332
+  },
+  {
+    "layer": 28,
+    "probe_type": "mlp",
+    "val_auroc": 0.8470591931121677,
+    "test_auroc": 0.8553683878391398,
+    "test_ece": 0.010971272202763276,
+    "domain": "overall",
+    "n_epochs": 11,
+    "elapsed_sec": 49.15193176269531
+  },
+  {
+    "layer": 28,
+    "probe_type": "mlp",
+    "val_auroc": 0.8470591931121677,
+    "test_auroc": 0.865121549609746,
+    "test_ece": 0.009393459866786838,
+    "domain": "code",
+    "n_epochs": 11,
+    "elapsed_sec": 49.15193176269531
+  },
+  {
+    "layer": 28,
+    "probe_type": "mlp",
+    "val_auroc": 0.8470591931121677,
+    "test_auroc": 0.8697738498918646,
+    "test_ece": 0.014118196965008982,
+    "domain": "reasoning",
+    "n_epochs": 11,
+    "elapsed_sec": 49.15193176269531
+  },
+  {
+    "layer": 28,
+    "probe_type": "mlp",
+    "val_auroc": 0.8470591931121677,
+    "test_auroc": 0.7936584234730486,
+    "test_ece": 0.026457957822936237,
+    "domain": "chat",
+    "n_epochs": 11,
+    "elapsed_sec": 49.15193176269531
+  }
+]
