@@ -1,6 +1,6 @@
 # Progress Log — Hidden-State Acceptance Probes for Speculative Decoding
 
-## Status: Phase 3 complete, awaiting go-ahead for Phase 4
+## Status: Phase 4 complete (negative result) -- awaiting user decision on Phase 5
 
 ## Compute environment
 - Remote node: H200 node (`103.180.163.218`), user `anish`, home `/mnt/data/anish`.
@@ -361,7 +361,127 @@ confidence threshold; the MLP's output is closer to usable as-is.
   causally used by the target's own verification outcome, or merely
   correlated with it.
 
+## Phase 4: causal check (activation ablation)
+
+### Design
+
+**Method: targeted mean-ablation via forward hook**, not interchange
+patching. At layer 24 (the Phase 3 AUROC peak), take the trained linear
+probe's weight direction in raw hidden-state space (`w / sigma`,
+normalized to unit length -- accounts for the per-dimension standardization
+the probe was trained on), and replace exactly that component of the
+hidden state with its training-population mean (`mu . direction`, reusing
+statistics already saved from Phase 3, no extra calibration pass needed).
+Resume the real forward pass through layers 25-28 + LM head to get the
+actual re-computed p(x) for the drafted token. Implemented via a PyTorch
+forward hook on `model.model.layers[23]` (verified experimentally that its
+output is a plain tensor in this transformers version, and that a no-op
+hook exactly reproduces unhooked logits, before writing the ablation math).
+
+**Control: identical mechanics on a random unit direction** (fixed seed),
+using the same mean-ablation formula (`mu` dotted with any direction gives
+that direction's population-mean value, so the control isn't a different,
+weaker method -- it's the exact same intervention aimed at an unrelated
+direction). This isolates whether the *specific* probe direction matters
+more than an arbitrary perturbation of the same "size."
+
+**Clean pass drives generation; ablated passes are measurement-only.**
+Each round runs the target forward 3x on the identical (context,
+draft_ids): clean, probe-direction-ablated, random-direction-ablated. Only
+the clean pass's accept/reject walk determines what token actually gets
+appended to the conversation -- the other two never affect generation,
+only get logged for analysis. This keeps generated text coherent and
+avoids the ablated conditions cascading into each other's context.
+
+**Fresh prompt sample**, not a replay of Phase 2/3's exact test split (Phase
+2 didn't log full token sequences, only isolated per-position data, so
+exact replay wasn't possible without re-deriving generation seeds). 20
+prompts/domain, capped at 128 new tokens/prompt, same domain loaders as
+Phase 2. Since the frozen Phase 3 probe is what's being tested (not
+re-trained here), using a fresh sample rather than the literal held-out
+test set doesn't compromise the causal question being asked.
+
+**Metric**: Pearson/Spearman correlation between the probe's own
+pre-ablation prediction (`probe_score`, computed from the clean-pass
+hidden state) and the ablation-induced shift `delta_p = p_ablated -
+p_clean`. If the direction is causally load-bearing the way probing
+usually hopes, high-confidence examples should lose real acceptance
+probability when the direction is removed, and low-confidence examples
+should gain some back (regression toward the population mean) -- a
+negative correlation. A random direction should show a much weaker (or
+absent) version of this.
+
+### Results (negative)
+
+6,736 drafted-token records (60 prompts across 3 domains). Full numbers in
+`analysis/phase4/causal_analysis.json`, scatter plot in
+`analysis/phase4/causal_scatter.png`.
+
+| | probe direction | random direction (control) |
+|---|---|---|
+| Pearson r | +0.028 (p=0.022) | -0.008 (p=0.51) |
+| Spearman rho | +0.052 (p<0.001) | -0.010 (p=0.41) |
+| mean \|delta p(x)\| | 0.0031 | 0.0025 |
+
+**This does not support the causal hypothesis as tested.** Three separate
+reasons, stated plainly rather than softened:
+1. **Wrong sign.** The predicted mechanism implies a negative correlation;
+   the observed one is weakly positive.
+2. **Barely distinguishable from the random control.** Both effect sizes
+   are tiny (r ~0.01-0.03); the probe-direction correlation is only
+   statistically significant because n=6736 is large, not because the
+   effect is practically meaningful. Mean |delta p(x)| for the real
+   ablation (0.0031) is only marginally larger than the control (0.0025).
+3. **Per-domain breakdown makes it worse for the hypothesis, not better**:
+   in the code domain, the *random* control shows a larger-magnitude
+   effect (r=-0.049, p=0.021) than the real probe direction (r=+0.038,
+   p=0.077).
+
+The scatter plot shows both conditions as visually flat, near-zero-slope
+clouds -- not "probe direction shows a real trend, random direction is
+flat," which is what the causal hypothesis would predict.
+
+**Caveat on the experiment itself (a real limitation, not an excuse):**
+the hook ablates the direction at *every* position in the sequence, not
+just the position being verified. This is a diffuse intervention across
+the whole context representation, which could dilute a genuine localized
+causal effect. A cleaner follow-up would restrict the ablation to only the
+specific verification position. Flagging this as the natural next
+experiment if the user wants to push on this further, rather than treating
+the current result as a fully conclusive disproof.
+
+**Interpretation**: Phase 3 showed the signal is *decodable* (good AUROC,
+improving with depth, saturating before the final layer). Phase 4's
+ablation of the specific linear direction the probe reads from does not
+show that direction is *causally necessary* for the target's actual
+verification computation, at least not via this whole-sequence mean-
+ablation method. This is consistent with (though doesn't prove) a
+"correlated but not the mechanism" story -- e.g. the probe's direction may
+track features (verbosity, syntactic predictability, etc.) that correlate
+with acceptance probability without being the specific computational
+pathway the model's own softmax relies on, especially given transformers'
+known tendency toward redundant/superposed feature encoding, where
+ablating one direction often has a smaller effect than expected because
+the same information is recoverable from elsewhere in the residual
+stream.
+
+### Implementation
+- `probes/ablation.py`: direction extraction from a saved probe checkpoint,
+  random-direction generation, `AblationHook` (toggleable, reusable across
+  clean/ablated passes on the same layer).
+- `probes/causal_verify.py`: Phase-4-specific verify step (3x forward
+  passes per round, clean pass drives generation).
+- `scripts/05_causal_check.py`: orchestrates generation + logging.
+- `scripts/06_analyze_causal.py`: correlation analysis + scatter plot.
+
 ## Open questions for user
+- **Phase 4 result was negative — decide how to proceed**: treat as the
+  reported causal-check result and move on (Phase 5 is conditional on
+  early saturation, which Phase 3 showed, but the brief also wants a
+  causal check before gating verification on this signal -- worth
+  explicitly deciding whether a negative causal result changes the
+  Phase 5 go/no-go), or run the more targeted single-position-ablation
+  follow-up flagged above first.
 - Confirm or override the EAGLE-vs-independent-drafter decision (Phase 0).
 - Confirm Qwen2.5-7B/0.5B pair, or prefer a different target model family.
 - Confirm no-KV-cache tradeoff (Phase 1) is acceptable, or prioritize adding

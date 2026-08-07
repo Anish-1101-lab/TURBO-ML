@@ -1,0 +1,66 @@
+{
+  "n_records": 6736,
+  "overall": {
+    "pearson_probe_ablation": {
+      "r": 0.027879752756718605,
+      "p": 0.022125941078694138
+    },
+    "pearson_random_ablation": {
+      "r": -0.007973904489209174,
+      "p": 0.512897733798933
+    },
+    "spearman_probe_ablation": {
+      "rho": 0.05234960897099726,
+      "p": 1.7184406378111432e-05
+    },
+    "spearman_random_ablation": {
+      "rho": -0.010062843945898839,
+      "p": 0.4089420572287569
+    },
+    "mean_abs_delta_probe": 0.0031176562995967132,
+    "mean_abs_delta_random": 0.002482274655603277,
+    "mean_delta_probe": -0.00038855857647656505,
+    "mean_delta_random": -1.0741804813926766e-05
+  },
+  "by_domain": {
+    "code": {
+      "n": 2207,
+      "pearson_probe_ablation": {
+        "r": 0.03771211305026075,
+        "p": 0.07651197116814383
+      },
+      "pearson_random_ablation": {
+        "r": -0.04917462155136042,
+        "p": 0.020874339130636268
+      },
+      "mean_abs_delta_probe": 0.0024264603151655495,
+      "mean_abs_delta_random": 0.0020091202601425213
+    },
+    "reasoning": {
+      "n": 2171,
+      "pearson_probe_ablation": {
+        "r": -0.007933518401502141,
+        "p": 0.7117944174076403
+      },
+      "pearson_random_ablation": {
+        "r": -0.012689983126859357,
+        "p": 0.5545470732334592
+      },
+      "mean_abs_delta_probe": 0.0029032183162395375,
+      "mean_abs_delta_random": 0.002675024470247162
+    },
+    "chat": {
+      "n": 2358,
+      "pearson_probe_ablation": {
+        "r": 0.021748726255375026,
+        "p": 0.29112059172509314
+      },
+      "pearson_random_ablation": {
+        "r": 0.003876009674810801,
+        "p": 0.8507849354044382
+      },
+      "mean_abs_delta_probe": 0.00396202203306067,
+      "mean_abs_delta_random": 0.002747665623877244
+    }
+  }
+}
