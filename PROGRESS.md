@@ -1,6 +1,6 @@
 # Progress Log — Hidden-State Acceptance Probes for Speculative Decoding
 
-## Status: Causal-check thread closed (Phase 4 + 4b, both negative) -- awaiting user decision on whether/how to proceed to Phase 5
+## Status: Phase 5 COMPLETE (steps 1-3 done at threshold=0.995). Verdict: mixed/negative -- 1.02x median overall speedup (code +8% median, reasoning/chat slower), still 5% overall completion-divergence rate. Not a general systems win. Stopped per instruction; no further Phase 5 work without explicit direction.
 
 ## Compute environment
 - Remote node: H200 node (`103.180.163.218`), user `anish`, home `/mnt/data/anish`.
@@ -537,40 +537,466 @@ computation, at least not via mean-ablation of this direction, at this
 layer. Combined with Phase 3's clean AUROC results, the overall picture
 remains "decodable but not shown to be the causal mechanism."
 
+## Phase 4c: interchange patching
+
+**Motivation.** Phase 4/4b's stated limitation was that mean-ablation is a
+blunt intervention -- it destroys the probe direction's information toward
+a population-average value rather than substituting a specific, real
+alternative. Interchange patching is a strictly stronger test: splice a
+REAL donor example's own activation into a recipient's forward pass, and
+check whether the recipient's p(x) shifts toward the donor's actual
+outcome. Phase 4/4b's code, data, and PROGRESS.md sections above are
+unmodified by this phase.
+
+**Design.** Key implementation observation: interchange-patching a single
+direction is mechanically identical to Phase 4/4b's mean-ablation of that
+direction -- both replace the component of a hidden state along a unit
+direction with a target scalar, leaving orthogonal components untouched.
+The only difference is what the target scalar is (a real donor's
+projection, not the Phase 3 population mean). This let Phase 4c reuse
+`probes/ablation.py`'s `AblationHook` completely unchanged (`mean_proj` is
+just set per-patch instead of fixed at construction) -- new code
+(`probes/interchange.py`, `scripts/12_interchange_patching.py`,
+`scripts/13_analyze_interchange.py`) is confined to data collection and
+analysis. Position-restricted patching only (Phase 4b's stronger design).
+
+A fresh generation pass was required (not Phase 4/4b's saved
+`causal_records.json`) because interchange patching needs each candidate's
+full token context to re-run a patched forward pass, and Phase 4/4b's
+saved output only persisted scalar metrics, not token sequences. Same 60
+prompts (20/domain), same sampling/seed convention as Phase 4/4b, driven
+by the real, unmodified accept/reject rule.
+
+**Pairing**: per prompt, after its generation completed, the single
+highest-label record (>= 0.9, "near-certain accept") and single
+lowest-label record (<= 0.3, "near-certain reject or borderline") from
+that SAME prompt's own trajectory were paired -- same domain and same
+underlying prompt by construction. **59 of 60 prompts yielded a
+qualifying pair** (one chat prompt's minimum label was 0.393, above the
+0.3 cutoff) -- n=59 pairs, plainly smaller than Phase 4/4b's ~6700
+per-token-record sample, an inherent consequence of a matched-pair design
+(one pair per prompt, not one record per drafted token).
+
+**Result: still negative, and more informatively so once a data-quality
+issue in the pairing was accounted for.** Per pair, per direction (probe,
+random-matched-to-Phase-4/4b), two swap directions were measured:
+patching the HIGH donor into the LOW recipient's own position (predicts
+p(x) should rise), and patching the LOW donor into the HIGH recipient's
+own position (predicts p(x) should fall).
+
+*high-into-low* turned out to be **largely uninformative, not just
+null**: because pairs were selected for extremity, LOW recipients'
+clean p(x) is itself already deeply floor-saturated (median 4.5e-7 across
+the 59 pairs; 46/59 below 1e-4) -- there is essentially no room for
+probability to rise further in absolute terms regardless of whether the
+intervention matters causally. Both probe (mean |shift| = 0.00011) and
+random (mean |shift| = 0.00004) shifts are correspondingly tiny, and a
+paired test shows no distinction (Wilcoxon p=0.826). This swap direction
+should be read as a limitation of extremity-based pairing, not as
+evidence against causality.
+
+*low-into-high* has real dynamic range for a genuine (if not universal)
+subset of pairs -- HIGH examples' clean p(x) has median 0.995, but 13/59
+pairs sit below 0.9 and 29/59 below 0.99, giving real room to observe a
+decrease for roughly half the sample even though the other half is
+itself close to ceiling-saturated (a spot-check of pair 0, code domain,
+found p_clean_high=0.999986 and p_clean_low=4.6e-11 -- saturated at both
+ends, and correspondingly showed almost no shift in either direction,
+consistent with the aggregate pattern rather than contradicting it) -- and
+shows genuinely larger shifts in aggregate -- mean
+|shift| 0.00506 (probe) vs. 0.00308 (random), roughly an order of
+magnitude bigger than the floor-locked direction. But **these shifts are
+not reliably in the causally-predicted (downward) direction for either
+condition**: only 44.1% of probe-direction patches and 33.9% of
+random-direction patches move p(x) down at all -- both below the 50%
+a coin flip would give, and a paired test finds no significant
+probe-vs-random difference (Wilcoxon p=0.391, paired t-test p=0.559).
+Probe's average signed shift (+0.00013) is closer to zero / less
+wrong-signed than random's (-0.00051), a small directional edge for
+probe, but this is not close to statistical significance at n=59 and
+should not be read as support for the causal hypothesis.
+
+**Per-domain (low-into-high, the informative swap direction)**: code
+n=20, probe frac-correct 40.0% vs. random 25.0% (no inversion -- probe
+less wrong than random here, unlike Phase 4/4b); reasoning n=20, probe
+frac-correct 40.0% vs. random 45.0% (inversion -- probe *more* wrong-signed
+than random on average here, the opposite domain from Phase 4/4b's
+code-domain inversion); chat n=19, probe 52.6% vs. random 31.6% (no
+inversion). None of the three domain-level paired tests approach
+significance (p=0.23-0.63) at n~20/domain.
+
+**Comparison against Phase 4/4b: confirms, does not overturn, and adds
+detail.** A strictly stronger intervention (real donor substitution
+instead of mean-ablation) still does not produce a reliable,
+majority-of-pairs shift in the causally-predicted direction on the one
+swap direction where the outcome variable had room to move -- if
+anything, LESS than half of patches (for both probe and random
+directions) go the predicted way, a more clearly negative headline
+number than Phase 4/4b's near-chance correlations. The domain-level
+inversion pattern is not stable across methods (code in Phase 4/4b,
+reasoning in Phase 4c) -- read as evidence the small per-domain samples
+(n~20) are noisy at this effect size, not as a reproducible domain
+effect. **Flagged limitation for any future follow-up**: pairing at less
+extreme thresholds (e.g. 0.7/0.3 instead of 0.9/0.3) would avoid the
+floor-saturation problem that made the high-into-low swap direction
+uninformative, and should be the first change to make before drawing
+further conclusions from this specific design -- not attempted here.
+
 ## Causal check — final summary
 
 **What was tested**: whether the Phase 3 probe's layer-24 linear direction
 is *causally load-bearing* for the target model's actual verification
-computation (not just correlated with/predictive of it) -- via mean-ablation
-of that direction with a random-direction control matched on mechanics.
+computation (not just correlated with/predictive of it) -- across three
+independent designs: mean-ablation (whole-sequence and
+position-restricted; Phase 4/4b) and interchange patching with real donor
+examples (position-restricted; Phase 4c) -- each with a matched
+random-direction control.
 
-**Phase 4 (diffuse, whole-sequence ablation)**: negative. Pearson r =
+**Phase 4 (diffuse, whole-sequence mean-ablation)**: negative. Pearson r =
 +0.028 (p=0.022) -- wrong sign versus the hypothesis's predicted negative
 correlation. Effect size (mean |delta p(x)| = 0.0031) barely
 distinguishable from the random control (0.0025). Code domain showed the
 random control with a *larger* effect than the real probe direction.
 
-**Phase 4b (position-restricted ablation, addressing Phase 4's main
-caveat -- that ablating every sequence position at once could dilute a
-real localized effect)**: sign flipped to the hypothesis-predicted
-direction and reached significance on Spearman (rho = -0.033, p=0.007,
-vs. random control's rho = -0.001, p=0.94), but Pearson stayed
-non-significant (r = -0.016, p=0.204), effect size remained negligible
-(mean |delta p(x)| = 0.0028 vs. control's 0.0023 -- same order of
-magnitude as Phase 4), and the code-domain inversion persisted (random
-control r=-0.056, p=0.009 vs. probe direction r=-0.019, p=0.373).
+**Phase 4b (position-restricted mean-ablation)**: sign flipped to the
+hypothesis-predicted direction and reached significance on Spearman (rho
+= -0.033, p=0.007, vs. random control's rho = -0.001, p=0.94), but
+Pearson stayed non-significant (r = -0.016, p=0.204), effect size
+remained negligible (mean |delta p(x)| = 0.0028 vs. control's 0.0023),
+and the code-domain inversion persisted (random control r=-0.056,
+p=0.009 vs. probe direction r=-0.019, p=0.373).
 
-**Net conclusion**: ruling out cross-position dilution did not reveal a
-hidden strong effect -- this constitutes a well-controlled negative
-result, not an inconclusive one. The probe's layer-24 direction is
-linearly decodable and predictive of accept/reject outcomes (Phase 3) but
-is not shown to be causally load-bearing for the target's own
-verification computation, under either ablation design tested (Phase 4 +
-Phase 4b).
+**Phase 4c (position-restricted interchange patching, real donor
+examples instead of a population mean -- the strongest test applied)**:
+negative, and on the swap direction with real dynamic range to observe an
+effect in, *more clearly* negative than either mean-ablation design --
+fewer than half of patches (44.1% probe, 33.9% random) move p(x) in the
+predicted direction at all, with no significant probe-vs-random
+difference (Wilcoxon p=0.391). A companion swap direction was confounded
+by floor-saturated outcome probabilities and was uninformative rather
+than negative.
 
-**This is the final result for the causal-check thread.** No further
-ablation variants (different layers, interchange/activation patching, or
+**Net conclusion, now across three designs of increasing intervention
+strength**: a progressively stronger causal test -- diffuse ablation,
+then position-restricted ablation, then position-restricted interchange
+patching with real donor substitution -- did not reveal a hidden strong
+effect at any step. This constitutes a well-controlled negative result,
+not an inconclusive one. The probe's layer-24 direction is linearly
+decodable and predictive of accept/reject outcomes (Phase 3) but is **not
+shown to be causally load-bearing** for the target's own verification
+computation, under three independent ablation/patching designs.
+
+**This is the final result for the causal-check thread**, updated to
+incorporate Phase 4c rather than left stale. No further ablation or
+patching variants (different layers, less-extreme pairing thresholds, or
 otherwise) are planned unless explicitly requested later.
+
+## Phase 5: verification-skipping gate (in progress)
+
+### Framing (stated explicitly per user instruction)
+
+This phase proceeds on **"predictive is enough for a gate" grounds only,
+not because the mechanism is understood.** To restate the current
+evidence honestly:
+- Phase 3: the layer-24 MLP probe is a real but modest predictor --
+  AUROC ~0.85-0.86, peaking a few layers before the final one (28), not
+  dramatically early.
+- Phase 4 + 4b: a well-controlled **negative** causal result. The probe's
+  direction is not shown to be causally load-bearing for the target's own
+  verification computation, under two different ablation designs.
+- Nothing below should be read as implying a causal explanation for why
+  the gate works when it works. It is an empirical shortcut that trades a
+  small, measured risk of divergence (step 2) for a small, measured
+  amount of compute (step 3) -- both numbers taken at face value, not
+  assumed.
+
+**Expected ceiling is modest, and not automatically achieved.** Skipping
+layers 25-28 covers 4 of 28 decoder layers (~14.3% of depth). But this is
+a ceiling on savings for an individual gated POSITION, not a guaranteed
+per-round number: the standard SD algorithm already computes one shared
+forward pass covering an entire round (context + all k drafted
+positions) at once, and every round still needs at least one real
+(non-gated) pass through all 28 layers regardless of gating -- either for
+the "bonus" token sampled from the target's own distribution when every
+drafted token in a round is committed, or for whichever position
+actually triggers a real rejection. So a round only saves compute to the
+extent gated positions let a LATER real-verification call be reached with
+a SHORTER effective sequence length, or let it be skipped ahead of an
+early real rejection -- not simply "each gated token times 4/28 always
+subtracted." No incremental KV-cache is used anywhere in this project
+(Phase 1 decision), so each real-verification call recomputes attention
+from scratch over whatever length it needs; a round with several
+non-gated positions in a row pays for overlapping recomputation rather
+than an incremental extension. Net effect on real wall-clock is
+genuinely unclear from the arithmetic alone -- that is exactly what step
+3 is for. Report the measured number, not the theoretical one.
+
+### Gate design
+
+**Decision rule** (`probes/gate.py`): at each drafted position, compute
+the layer-24 hidden state, standardize with the frozen Phase 3
+train-split `mu`/`sigma` (never refit), run it through the trained MLP
+probe (`analysis/phase3/probe_mlp_layer24.pt`), and take
+`sigmoid(logit)` as the predicted acceptance probability. If that
+probability is `>= threshold`, the gate fires: commit the drafted token
+immediately, skip the layer-25-28 computation for that position entirely.
+If it does not fire, fall back to the exact accept/reject rule exactly as
+in the ungated baseline (`speculative/sd_loop.py`), computed via a real
+(non-skipped) forward through the remaining layers.
+
+**The gate can only pre-empt an accept, never decide a reject.** There is
+no code path where the gate's output causes a rejection -- a rejection is
+only ever produced by the real accept/reject draw, which by construction
+only runs when the gate does not fire. Implemented in
+`speculative/gated_sd_loop.py` (`gated_verify_and_step_shadow` for
+validation, `gated_verify_and_step_fast` for real layer-skipping) and
+`speculative/layer_skip.py` (the actual layer-truncation mechanics: swaps
+`target.model.layers` for a shorter `nn.ModuleList` and reuses the real
+HF forward code, rather than hand-reimplementing decoder internals --
+see that file's docstring for the norm-placement and rotary-position
+subtleties this requires getting right, and the explicit note that the
+prefix+suffix composition is UNVALIDATED numerically as of this write-up).
+
+**MLP probe, not linear** (`configs/gate_config.yaml`): Phase 3 found
+linear probes poorly calibrated (test ECE ~0.25-0.28 across layers)
+despite decent AUROC, while MLP probes are well-calibrated (ECE
+~0.01-0.03). A threshold-based gate is only honest if "0.98 predicted
+probability" really does correspond to ~98% empirical acceptance --
+that requires calibration, which only the MLP probe has.
+
+### Threshold choice: 0.98
+
+Picked by inspecting Phase 3's saved calibration data
+(`analysis/phase3/reliability.json`, `mlp_layer24_overall`), not by any
+new run. The top calibration bin (predicted probability 0.933-1.0, n=7006
+of 15559 test-set records, ~45% of the test set) has mean predicted
+confidence 0.988 against an empirical acceptance rate of 0.983 -- i.e.
+close to perfectly calibrated in aggregate at the top of the range.
+0.98 was chosen as a cutoff inside the upper portion of that bin, on the
+reasoning that restricting to the top of an already-well-calibrated bin
+should, if the calibration trend holds, give an empirical acceptance rate
+at or above that bin's 98.3% aggregate figure (since the bin's lower end,
+0.933-0.98, likely pulls the aggregate down more than the upper end pulls
+it up).
+
+**Explicit limitation**: Phase 3's saved reliability data only has
+15-bin resolution -- there is no directly-measured empirical acceptance
+rate at exactly the 0.98 cutoff, only the coarser 0.933-1.0 aggregate.
+This is an extrapolation from a calibration trend, not a directly
+verified number. **Step 2's losslessness validation is the actual
+empirical test of whether 0.98 is safe enough** -- this threshold choice
+should be read as a starting point for that test, not as a validated
+final answer.
+
+### Layer-skip mechanism check (passed)
+
+Before trusting `layer_skip.py` for anything, ran
+`scripts/08_verify_layer_skip.py` on 3 real prompts on the H200 node:
+`forward_prefix` matches a real `output_hidden_states=True` call's
+`hidden_states[24]` exactly, and `forward_prefix` + `forward_suffix`
+composed together (both full-length and length-restricted to an earlier
+position) reproduces the real full-depth model's logits exactly (max abs
+diff 0.00000, identical argmax) on every prompt tested. The mechanism is
+trustworthy.
+
+### Step 2: losslessness validation (result: NOT lossless -- real, non-trivial divergence)
+
+`scripts/09_gate_losslessness.py`. 60 held-out prompts (20 each,
+code/reasoning/chat, fresh sample, not reused from Phase 4/4b), 128 new
+tokens/prompt, threshold 0.98. For each prompt, ran the ungated baseline
+and the gated-shadow generation with the identical seed and compared.
+
+**Two measurements, both reported plainly:**
+
+| | overall | code | reasoning | chat |
+|---|---|---|---|---|
+| gate fire rate (frac. of positions gated) | 32.5% | 44.9% | 39.4% | 14.7% |
+| local mismatch rate (gate said accept, real rule would reject \| gated) | 0.41% | 0.50% | 0.35% | 0.29% |
+| **exact output match rate (60 prompts)** | **85%** (51/60) | 75% (15/20) | 85% (17/20) | 95% (19/20) |
+
+The **local** mismatch rate is low and consistent with (if anything
+slightly better than) the threshold's Phase 3 calibration-bin
+extrapolation (that predicted ~1.7% from the raw 0.933-1.0 bin; 0.98 as an
+even-higher cutoff giving 0.41% is directionally exactly what the
+threshold reasoning in step 1 predicted).
+
+**But the local rate is not the whole story, and should not be reported
+as "the" result.** Generation is autoregressive: once a single gate
+mismatch happens, every token after it is conditioned on a token the
+ungated baseline would never have produced, so the two trajectories
+diverge for the rest of the generation. Checking the actual data: **every
+one of the 9 diverged prompts had exactly one gate mismatch, and every
+prompt with zero gate mismatches matched exactly** -- a clean, fully
+explained relationship, not noise. The consequence is that a 0.3-0.5%
+per-position error rate, compounded over ~110-125 drafted positions per
+128-token generation, produces a **15% chance that a given completion
+comes out completely different from what the exact algorithm would have
+produced** (25% for code specifically, the domain with the highest gate
+fire rate).
+
+**This is a genuine divergence, not noise or a rounding artifact, and
+this gate as configured (threshold=0.98) is NOT lossless in any strict
+sense.** Whether a 15% (up to 25% for code) rate of full-completion
+divergence is an acceptable cost for whatever compute saving step 3
+measures is a product decision, not a technical one -- stated here rather
+than decided here, per instruction. Full per-prompt data in
+`analysis/phase5/losslessness.json`.
+
+### Step 2 rerun at threshold=0.995 (same 60 prompts, same seeds, same 128-token cap)
+
+Single-parameter rerun (`scripts/09_gate_losslessness.py --threshold
+0.995`, no changes to `gate.py`, `layer_skip.py`, or
+`gated_sd_loop.py`), saved separately to
+`analysis/phase5/losslessness_t0995.json` so both results stay on record.
+
+| | threshold=0.98 | threshold=0.995 |
+|---|---|---|
+| gate fire rate -- overall | 32.5% | 24.5% |
+| gate fire rate -- code | 44.9% | 36.6% |
+| gate fire rate -- reasoning | 39.4% | 27.7% |
+| gate fire rate -- chat | 14.7% | 10.2% |
+| local mismatch rate -- overall | 0.41% | 0.18% |
+| local mismatch rate -- code | 0.50% | 0.12% |
+| local mismatch rate -- reasoning | 0.35% | 0.33% |
+| local mismatch rate -- chat | 0.29% | 0.00% |
+| exact-output match rate -- overall | 85% | 95% |
+| exact-output match rate -- code | 75% | 95% |
+| exact-output match rate -- reasoning | 85% | 90% |
+| exact-output match rate -- chat | 95% | 100% |
+
+**Reading the actual numbers rather than rounding toward either
+preconception**: gate fire rate dropped by about a quarter (relative,
+32.5% -> 24.5%), while the local mismatch rate roughly halved (0.41% ->
+0.18%, -56% relative) and the full-completion divergence rate dropped by
+about two-thirds (15% -> 5% overall, -67% relative). These are NOT
+proportional -- divergence fell faster than the gate-fire rate did. That
+is closer to case (a) than case (b): there is headroom in this
+threshold's range where raising it buys a disproportionate reliability
+improvement without the fire rate collapsing to near-zero, particularly
+in the code domain (fire rate stayed at 36.6%, still over a third of
+positions, while its divergence rate fell from 25% to 5%).
+
+**This is not a clean pass, and should not be reported as one.**
+Full-completion divergence at threshold=0.995 is still 5% overall (10%
+for reasoning specifically, 1 case of 20) -- a real, nonzero rate of
+producing different output than the exact algorithm, not zero. "Better"
+is not the same as "acceptably lossless" and the choice of what counts
+as acceptable is not being made here. What this rerun does establish is
+that the gate design is not doomed by construction (case b is not what
+happened) -- there is a threshold response worth taking to step 3 if the
+user decides a low-single-digit-percent divergence rate, in exchange for
+whatever compute saving materializes, is a trade worth measuring.
+
+### Step 3: wall-clock benchmarking, threshold=0.995 only (final Phase 5 step)
+
+Threshold=0.98 was not benchmarked -- its 15% divergence rate already
+ruled it out. `scripts/10_gate_benchmark.py`, using the REAL
+layer-skipping path (`gated_verify_and_step_fast` /
+`run_gated_speculative_decoding_fast`, genuinely skips layers 25-28 for
+gated positions), not step 2's shadow path. Same 60 held-out prompts,
+same seeds, 128-token cap. Gate fire rate this run: 24.6% overall --
+matches step 2's 24.5% at this threshold within noise, no bug indicated.
+
+**Timing hygiene, stated plainly rather than left implicit**: NVIDIA H200
+NVL, GPU index 4, idle at run start (other GPUs on this shared box were
+in use by other tenants, index 4 was not). One short warmup generation
+per model before timing, excluded from all numbers below. **One timed
+run per prompt per condition -- no repeated trials of the same prompt**;
+aggregate stats come from spread across 60 distinct prompts, not
+resampling. Fixed order (ungated timed first, then gated) per prompt,
+not alternated/randomized -- a real limitation on ruling out systematic
+drift over the run. `torch.cuda.synchronize()` brackets each condition's
+whole generation, not sub-steps within it.
+
+**Result -- paired with the divergence rate every time, never stated alone:**
+
+| domain | mean speedup | median speedup | gate fire rate | step 2 divergence rate (this threshold) |
+|---|---|---|---|---|
+| **overall** | **1.09x** | **1.02x** | 24.6% | **5%** |
+| code | 1.34x | 1.08x | 37.0% | 5% |
+| reasoning | **0.94x (slower)** | **0.92x (slower)** | 27.8% | **10%** |
+| chat | 0.96x (slower) | 0.97x (slower) | 10.1% | 0% |
+
+**Probe overhead** (isolated microbenchmark, not interleaved with the
+generation timing above): 82.3 microseconds/call, 6740 total probe calls
+across the whole run, summing to an estimated 0.55 seconds of probe
+compute against 171.1 seconds of total gated wall-clock across all 60
+prompts -- about 0.3% of gated runtime. **The probe itself is not what's
+costing time.** The slowdowns in reasoning and chat come from the
+mechanism flagged as a known limitation back in step 1's design write-up:
+no KV-cache anywhere in this project, so the "fast" path's suffix calls
+recompute attention from scratch each time real verification is needed,
+and that redundant recomputation can cost more than the 4 skipped layers
+save -- exactly the failure mode predicted, now measured rather than
+theorized.
+
+**Plain verdict, not rounded toward success:** this gate at threshold=0.995
+produces a **net-negative or negligible result in two of three domains**
+(reasoning: measurably slower AND still 10% divergent -- the worst
+combination in the table; chat: measurably slower, though at least fully
+lossless in this sample at 0%). **Code is the only domain with a real
+speedup** (1.34x mean / 1.08x median), and even there the gap between
+mean and median (driven by a small number of prompts, n=20, single run
+each -- see timing-hygiene caveats above) means the 1.08x median is the
+more trustworthy number, not the 1.34x headline. The overall/pooled
+1.09x mean / 1.02x median is arithmetically dominated by code; it is not
+evidence of a general win, and the median in particular (2%) is small
+enough to be within the noise floor of a single-run-per-prompt
+methodology.
+
+**This does not support treating the gate as a systems contribution as
+currently designed.** It is, at best, a domain-specific proof-of-concept
+(code, ~8% median speedup, medium confidence given methodology) riding
+alongside a domain where it actively regresses both speed and
+correctness (reasoning) and a domain where it's lossless but not faster
+(chat) -- all of this on top of a 5% overall completion-divergence rate
+that was never resolved to zero. The honest reading is that the
+per-position "skip 4 of 28 layers" savings this gate targets are smaller
+than the cost of recomputing attention without a cache once any real
+verification is needed in a round, in two of three domains tested. A
+KV-cached suffix path might change this picture, but that is a new
+experiment, explicitly out of scope for this closeout.
+
+### Supplementary: why reasoning was slower and code was faster
+
+Run to support the research report's discussion section
+(`report/report.md`), not a new Phase 5 step -- `scripts/11_gate_round_analysis.py`,
+same 60 prompts/seeds/threshold=0.995, no new mechanism code. Reconstructs
+per-round composition (gated vs. real-verification positions) and where in
+each completion gated positions fire.
+
+**Bug caught before reporting, not before running**: the first version
+inferred round boundaries after the fact from gaps in position numbers.
+That silently merges consecutive rounds whenever a round ends in an
+ordinary rejection (no position gap in that case -- only a round that
+fully completes with a bonus token leaves one, since the bonus position is
+never logged as a record). Rejections are the normal, frequent SD outcome,
+not rare, so this wasn't a corner case -- e.g. chat's first (buggy) run
+showed 8.75 "real verifications per round" against a hard cap of k=4 per
+round, which is what caught it. Fixed by tracking round boundaries
+directly during generation (manual per-round loop, not post-hoc
+inference) and rerun before any numbers were used.
+
+**Result** (`analysis/phase5/round_composition.json`): completion length
+is essentially identical across domains (129.2-129.9 mean tokens) --
+rules out "reasoning completions are just longer" as an explanation.
+Two other factors both point toward code and away from reasoning,
+compounding rather than either dominating alone: (1) code's gate fires
+disproportionately late in the completion (52.8% of its firing events in
+the last third, vs. 40.8% reasoning / 36.1% chat) -- skipping
+disproportionately the most expensive potential real-verification calls;
+(2) reasoning needs a real (uncached) verification event in 95.6% of its
+rounds, more than code's 84.5%, and slightly more such events per round
+when it does (2.46 vs. 2.05 mean). Chat fires so rarely (10.1%) that its
+behavior stays close to the ungated baseline throughout, consistent with
+its comparatively small measured slowdown. Full numbers and interpretation
+in `report/report.md` Section 7.
+
+### Status: Phase 5 complete. Verdict: mixed/negative -- not a general
+speedup, domain-specific at best, still imperfectly lossless.
+
+Per instruction, stopping here. No further threshold sweeps, no
+KV-cache follow-up, no other Phase 5 variants without explicit direction.
 
 ## Open questions for user
 - Confirm or override the EAGLE-vs-independent-drafter decision (Phase 0).

@@ -1,0 +1,79 @@
+{
+  "n_pairs": 59,
+  "probe": {
+    "high_into_low": {
+      "mean": -6.71172018052827e-05,
+      "median": 9.534387168663727e-13,
+      "frac_correct_direction": 0.576271186440678
+    },
+    "low_into_high": {
+      "mean": 0.0001278519630432129,
+      "median": 0.0,
+      "frac_correct_direction": 0.4406779661016949
+    },
+    "combined": {
+      "mean": 3.0367380618965096e-05,
+      "median": 5.960464477539063e-08,
+      "frac_correct_direction": 0.559322033898305
+    }
+  },
+  "random": {
+    "high_into_low": {
+      "mean": 5.6010777687392246e-06,
+      "median": 8.075805649210288e-13,
+      "frac_correct_direction": 0.559322033898305
+    },
+    "low_into_high": {
+      "mean": -0.0005051523952160852,
+      "median": 0.0,
+      "frac_correct_direction": 0.3389830508474576
+    },
+    "combined": {
+      "mean": -0.000249775658723673,
+      "median": 5.551115123125783e-17,
+      "frac_correct_direction": 0.5084745762711864
+    }
+  },
+  "paired_test_probe_vs_random": {
+    "wilcoxon_stat": 762.0,
+    "wilcoxon_p": 0.46912127450058794,
+    "paired_t_stat": 0.5207800713624823,
+    "paired_t_p": 0.6045025781696047,
+    "mean_diff_probe_minus_random": 0.00028014303934263804
+  },
+  "by_domain": {
+    "code": {
+      "n": 20,
+      "probe_mean": 0.0007056237528777875,
+      "probe_median": -1.1920348694932636e-07,
+      "random_mean": -0.00011784129028831361,
+      "random_median": -2.9802322359939737e-08,
+      "probe_frac_correct": 0.45,
+      "random_frac_correct": 0.5,
+      "inversion_random_beats_probe": false,
+      "wilcoxon_p": 0.4523754119873047
+    },
+    "reasoning": {
+      "n": 20,
+      "probe_mean": -0.0005724507862774897,
+      "probe_median": 1.5782713802536819e-06,
+      "random_mean": -0.0003467821364751322,
+      "random_median": 8.840972327561758e-07,
+      "probe_frac_correct": 0.7,
+      "random_frac_correct": 0.6,
+      "inversion_random_beats_probe": true,
+      "wilcoxon_p": 0.6215133666992188
+    },
+    "chat": {
+      "n": 19,
+      "probe_mean": -4.588336186773763e-05,
+      "probe_median": 1.9872992140790302e-14,
+      "random_mean": -0.00028654185944356777,
+      "random_median": -5.891884524711344e-08,
+      "probe_frac_correct": 0.5263157894736842,
+      "random_frac_correct": 0.42105263157894735,
+      "inversion_random_beats_probe": false,
+      "wilcoxon_p": 0.21453736472050733
+    }
+  }
+}

@@ -1,0 +1,59 @@
+# Tier 0 experiment configuration: "does the acceptance probe read a
+# distinct verification feature?" (E1 cheap-feature decomposition, E2
+# two-position decomposition, E3 drafter-swap transfer).
+#
+# Everything data-generation-side reads from this file -- no hardcoded
+# paths/model names in speculative/tier0_*.py or scripts/15_tier0_generate.py.
+
+target:
+  name: Qwen/Qwen2.5-7B-Instruct
+  dtype: bfloat16
+
+drafters:
+  A:
+    name: Qwen/Qwen2.5-0.5B-Instruct
+    dtype: bfloat16
+  B:
+    name: Qwen/Qwen2.5-1.5B-Instruct
+    dtype: bfloat16
+  C:
+    name: meta-llama/Llama-3.2-1B-Instruct
+    dtype: bfloat16
+    cross_tokenizer: true   # needs detokenize/retokenize handling, see E3 notes in the spec
+
+device:
+  cuda_visible_devices: "0"   # re-checked via nvidia-smi at Tier-0 build time: GPU 0 idle (0% util)
+
+domains:
+  code:
+    datasets: [openai/openai_humaneval, mbpp]
+  reasoning:
+    datasets: [gsm8k]
+  chat:
+    datasets: [mt_bench]
+
+temperatures: [0.0, 0.7]   # 0.0 = greedy; 0.7 = standard rejection sampling
+gamma: 5                    # draft window (k in the existing sd_loop.py naming)
+probed_layers: [4, 8, 12, 16, 20, 22, 24, 26, 27]
+
+target_volume_per_domain: 150000   # drafted-token events, per domain (full-scale target; smoke test uses far fewer)
+max_new_tokens_per_prompt: 256
+max_passes: 20
+
+split:
+  train_frac: 0.70
+  val_frac: 0.15
+  test_frac: 0.15
+
+unigram_freq:
+  source: wikitext-103-raw-v1
+  n_samples: 20000
+  cache_path: data/tier0/unigram_log_freq.pt
+
+seed: 0
+
+paths:
+  pass1_dir: data/tier0/pass1
+  pass2_dir: data/tier0/pass2
+  results_dir: results
+  figs_dir: figs

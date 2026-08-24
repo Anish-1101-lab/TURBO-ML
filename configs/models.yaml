@@ -17,7 +17,11 @@ drafter:
   revision: main
 
 device:
-  cuda_visible_devices: "4"   # pinned idle GPU index on the H200 node, checked via nvidia-smi before each session
-                                # (moved from GPU 1 -> GPU 4 for Phase 4: another tenant's job occupies GPU 1 now)
+  cuda_visible_devices: "1"   # pinned idle GPU index on the H200 node, checked via nvidia-smi before each session
+                                # (moved from GPU 1 -> GPU 4 for Phase 4: GPU 1 was occupied then;
+                                #  moved GPU 4 -> GPU 1 for Phase 4c: another tenant's job took over
+                                #  GPUs 4-7 entirely (100% util, 118-136GB each) between Phase 5 and
+                                #  Phase 4c sessions -- GPUs 0-2 were lightly used (~1.2GB, 11-16% util)
+                                #  by comparison, GPU 1 lowest of those three at check time)
 
 seed: 0

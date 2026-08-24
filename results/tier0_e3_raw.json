@@ -1,0 +1,5402 @@
+[
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8020581541434206
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.551140334159202
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7571639062672361
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7545062010495296
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0104425951381406
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8087407740670962
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5474392601132472
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7685188395291299
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7592588944744736
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.035716981179861
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8494819921384515
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5736209137461844
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8113060812833888
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8167509757263448
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 0.9828101731005869
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8598347897992192
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5474567130562594
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8266156609987866
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8225935147685309
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0124681558869577
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8167707247406185
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5568713043762017
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7625218652000567
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.763699959552663
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 0.995532443938919
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8241093791820672
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.56559806228071
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7751395958418036
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7714226431546822
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.013694335313812
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.864329022430373
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5415085053372506
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8303507361940633
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8315816222008605
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 0.9962878340523601
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8720340584940027
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5529699510831586
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8495929001791239
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8371252711810098
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0369821845583922
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8284103710230115
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5649563390026324
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7713971665852467
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7670627353956223
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0162300112114235
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8351744148707754
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5321067064777757
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7858069243739856
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7765689101806473
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0334022149752995
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8751782352514386
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5453537505862488
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8351172184839077
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8390448124977019
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 0.988415708280979
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8853583260171569
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5319071388872398
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8452492764128992
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8489875033487244
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 0.9892883644830976
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8400488717119298
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5644848491791475
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7808730058674904
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.776741993265781
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0149273066691475
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8458760370658505
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5293096792581276
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7906898897416098
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7848262077732429
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0205868765174697
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8982571444242751
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5470241560534375
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8534637628630412
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8513626024972291
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0059800341609453
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9080090522713474
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5286701864158303
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8635590504856306
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8595864128464945
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0110477968499663
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8478047825403223
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5605512109790902
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7966854195229316
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7961892830315542
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0016750656414686
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8604220192786023
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5538634532422553
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8095342778049178
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8043131569409205
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0171570658215443
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.911339665688052
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5513531194683892
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8758776284202952
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8680316329693074
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.021318807265793
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9231870549325958
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.537535812814192
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8845007905615876
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8738486954420579
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0284930648398656
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8483474640552691
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5403332305770702
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8079673374621134
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7953507887230723
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.042717166233372
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8645656308765908
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5409958609360609
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8215823313424839
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.814203318782798
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.023484833286522
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9200517391671119
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5739813157175772
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8843659223306071
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8722069012612215
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0326673713684105
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9314403095462999
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5202621378232266
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8941881904281639
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8837596062425475
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0271747834216436
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8514940535019925
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5521893332750122
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8081380567418357
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7985786963350511
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0320162172456455
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.870390192608978
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5375532917934196
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8222008604251698
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8164011325254371
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0183303006959574
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9179789179557197
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.548843879215567
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8861583434451676
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8703141497391934
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0427858177094584
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9291608822874933
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5323060570998502
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.898026485126411
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8833423945874109
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0383054176796815
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.857655489145849
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.593580276421291
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8184886353488715
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8060601404625705
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0406080153642907
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8738229894921308
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.560153585898508
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8324592506211556
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8266134285158978
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0178982907464051
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9388076819332618
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.551530695135706
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.9099047386419149
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8999101753943615
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.024992020364817
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9492869895643377
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5259204669994442
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.918100971261379
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.912030981609594
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0147318767828397
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8559044234835553
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.6390884651581631
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8211993948658146
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8125122786558877
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0277976796537087
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8718722868093937
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5710610764482298
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8253828051541464
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8255511606284571
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 0.9994828601624834
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9498688382258854
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.6320327896624423
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.9222562785298181
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.9093396578260344
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0315547747618266
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9612156291582005
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5314623535419494
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.9316471521397693
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.9238599891790241
+ },
+ {
+  "experiment": "E3",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.018372017080046
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.810704460477747
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5511803785940924
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7646656988503747
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.767811101799314
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 0.988255143540329
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8142330619122605
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5230022492287291
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7700987890084157
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7650572522871149
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0190205575504863
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8519003589470963
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5518797754966771
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8209583747403002
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8098504311667377
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.035849372652914
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.85485289033483
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5543655980077631
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8250614807589268
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8130423931013322
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0383944408887267
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8326902859442269
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5302402642655423
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7904353341484972
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7832803247832717
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0252576996679863
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8369134165734559
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.4956536931821145
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7917368867761795
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7885769818481018
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0109499548711096
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8703007003356747
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5479813441618971
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8359578099263757
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8284251766570038
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0229356145775594
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8750085155913262
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5319305874129651
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8434950227681073
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8322952969318391
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.033704135868542
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.840987618521443
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5644893177571317
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8018684273595864
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7908543650193945
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.037867963024923
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8450476925268284
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5288398247115217
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8034584930459194
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7943546848261976
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0309280221753465
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8834790458504471
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5246630184355164
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8449503727008638
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8425911296736444
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0068864685126755
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.884532023780839
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5337549231939442
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.853482497637704
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8441533362947902
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.027107572000763
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8538124641368725
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5407844496667996
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8077390574934779
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8045427068020389
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.01049557457804
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8591273984616421
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5232165210932269
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8120545411802779
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8004390283368673
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0386617973959984
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9010882572226644
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5417597644771137
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8702351457754209
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8614236669246492
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.024379916583074
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9076385926251211
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5350757873140811
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8756556421094732
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8663436541629076
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0254187232145278
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8649238997618416
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5475147280034945
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8231670643261999
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8174477508956881
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0180165504854723
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8735133179907817
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5031917560499524
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8283599177508805
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8229489621925772
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0167548318519652
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9180078534671583
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5310361229124052
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8905653940035081
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8788871028556686
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0308226145989672
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9203342701353027
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5141895538757328
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8920476489238768
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8804288922167114
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0305412047951046
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8661786441834194
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5547774872219771
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8241161806977131
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.821390190250701
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0084818719727744
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8788395291721153
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5100805709960408
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8367187822001183
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8308244909423692
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0178169737100144
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9271431503643074
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5333361380602486
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8939741223631203
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8790956642135423
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0392472390325125
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9305813167404762
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.49490145846958566
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.9073413216340525
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8829110204355783
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0638015097363445
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8698242792228494
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5978589502834339
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8310691164325743
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8114998404782294
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.062822747916343
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8817767620494024
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.4999934749534989
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8511219189018796
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8379550759216771
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0389603350217294
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.923605845004532
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5562912748306704
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8880513995936393
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8678274356073963
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0549822064056942
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9310601253481136
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5117869459896519
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8991385442760689
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8698199312148231
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0792780772116226
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8740829441195249
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5856600107715421
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8383929975285573
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.826480384928322
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0364879887128617
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8856614942634644
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.4799611417834656
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8591396052103322
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8468644431316336
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0353889316756524
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9428962351872461
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5349811683449248
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.916996777507583
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.906795207630178
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.025077900835743
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9512927183378491
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5048180804286735
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.9314386497588856
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.9161182628766125
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0368173864236665
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8726622572187238
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.6226289539840508
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8374270893917259
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8337754528815433
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0109403986382384
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.887194787472977
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5267334632084152
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8554641167607768
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8483791366895492
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0203369815384244
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.9518317706252605
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5770138721561431
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.9234387092933262
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.9118508646995876
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0281360210380788
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9599993440184157
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5218153513830259
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.9422573170117374
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.9315590543488382
+ },
+ {
+  "experiment": "E3",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0247898000403244
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7449631092865632
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5104319729528853
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7264866628599396
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.6802847794364231
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.2562716806595948
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.7506175917145188
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5177316437992334
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7301030535388966
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.6974920919777761
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1651254044379167
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7931399518582916
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.48774287310393183
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7774514868894509
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7491230932376214
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1137124354216692
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.7938254816321988
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5148721104419649
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7787747777143323
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7573528745320898
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0832394167781927
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.764484457972545
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5226876753008456
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7552183883042844
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7189366542494856
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1657179524331938
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.772458326634736
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.48340067150763905
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.757860438136154
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7413555573682826
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0683840925307002
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8126225728796306
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.4881324619565837
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7929185813597266
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7562516427839864
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1430895746750374
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8147840060786828
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5015602595804405
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.796960962920666
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7554970951047302
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1622870420461706
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7768435009058623
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5141801093540396
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7675585284280937
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7140422909245815
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.2500264656687348
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.7858488354591242
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5075368688441178
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7764680824065766
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7426154027426561
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1395322773460852
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8263141051838503
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.49460499292515003
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7917765632505822
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.752018924871523
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1577565589541632
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.827670647226324
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5274406120568799
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8017012444371936
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7566957609375424
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.175326165633883
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7859975683035383
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.511281103844675
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7695887828443502
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7514252567274837
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.0722422494592643
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.796674456152989
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.48775205750203465
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7801026003571072
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7520370521430967
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.111354850310168
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8501875199248823
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.49984345719585854
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8361838467883007
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7795950367530431
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.2023956172199173
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8535571345657207
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.46636253924683724
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8482248869311435
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7836600774034496
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.2276133113926477
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7964252676120998
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5157335396938018
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7722308326762197
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7506027317798262
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.086304330135537
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8043189463853209
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5106877401857906
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7810134957536866
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7700464964515865
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.04061152226082
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8633835743532721
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.47425976149399507
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8339949787457741
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7979896855824746
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1208273135122802
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8698378725377636
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5040599477905265
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8574154136190192
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7993741559489174
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1938753112677016
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.791681565363901
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5519170043668914
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7716235690785
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7361031804297977
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1504443463406198
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8056734124531648
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5731664516028535
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.7822008320417652
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7624239787548377
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.0753622187300325
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.871160934120434
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5138529572280075
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8659986767091751
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7866782681204738
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.2766879021166948
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8763624532012682
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5258200418341819
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.866873317562607
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8098358575558999
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1840892802293437
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7911631229135471
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5446302403559131
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7805965685074912
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7340230760167135
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.1990123934934156
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8115149401952513
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5380431943316558
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8001830854428946
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7688727556171884
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.116450362379909
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8628420885845289
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.4768928561289021
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8489499777940923
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7307782944050176
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.5120571832534757
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8698139057685907
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5038024123999196
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.854515050167224
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7718229690658112
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.3042130007835806
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7922878859678876
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5470009389561665
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7838096273939328
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7142734136371465
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.3245209593502807
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8125586400195709
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.4989907828301321
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.803509439776672
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7568589063817059
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1816192946241113
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8805606465850626
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5813966673391393
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.8760638442504827
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.7773064687168612
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.3561308035495414
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8894382872230018
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5288055940100028
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8753886033843615
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8148208572386727
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1923879716132375
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.7797362498572051
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5605591507379639
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.7563830655028958
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.6857682790874732
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.3801229508196717
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.8103257145493937
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5844325726375291
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8023628898496342
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.7711024100207557
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.1153087492895588
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_linear",
+  "metric": "auroc",
+  "value": 0.8856122087123044
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_linear",
+  "metric": "auroc",
+  "value": 0.5091424276226836
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_linear",
+  "metric": "auroc",
+  "value": 0.874455048898315
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_linear",
+  "metric": "auroc",
+  "value": 0.8017873489771687
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_linear",
+  "metric": "transfer_ratio",
+  "value": 1.240791074136921
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "A_to_A_baseline_mlp",
+  "metric": "auroc",
+  "value": 0.9034811961296216
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "shuffled_lower_bound_mlp",
+  "metric": "auroc",
+  "value": 0.5149330224010118
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "frozen_A_to_B_mlp",
+  "metric": "auroc",
+  "value": 0.8889296752499296
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "retrained_B_upper_bound_mlp",
+  "metric": "auroc",
+  "value": 0.8423743100307257
+ },
+ {
+  "experiment": "E3",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "transfer_ratio_A_to_B_mlp",
+  "metric": "transfer_ratio",
+  "value": 1.135977974559557
+ }
+]

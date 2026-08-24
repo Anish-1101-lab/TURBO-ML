@@ -1,0 +1,2882 @@
+[
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8166188756977105
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8116849115952477
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8180937939342102
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7424475194963432
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8275659313475889
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8253746203237138
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8285646522825678
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.7493194519183137
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8443702649189742
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8411542865542889
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8454503440082195
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7795614379941467
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8568672429975929
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8571755905875152
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.854483130167857
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.7900538211531722
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8381166015721484
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8306288568857887
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8426317765494541
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7778750542533209
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8481246871941858
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.841033035519423
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8521386255374016
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.7951645536915027
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8654475432095896
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8593798192283943
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8713920022114168
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.809889392929735
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8747562089129434
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8708990996741939
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.878861419448335
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8184105333693938
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8476583458500585
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8393901201646887
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8516367390912906
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8047837720533361
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8591611964790611
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8520701770590149
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8622706315382336
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.82135206246265
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8733254179793706
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8659516121662352
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.882316625534266
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8177804048622128
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8849748249442029
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8808907974494651
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8888508942332265
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8378580835357088
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8548293003700091
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8457087392131953
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8613485204215345
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8045616471075894
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8675834101965652
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.860841229102022
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8722895460504996
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8224701223360109
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.893699511584905
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8883570034793138
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8982287077262219
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8591383968527033
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9059210327579064
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9043643665087637
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9076222843178156
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8689992574149303
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8735827294297611
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.864980749014435
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.88142775320849
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8255742952179939
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8860467815263648
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8808870115838844
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8898146985648102
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.84800194429032
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9104695736521556
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9043242626373884
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9178879691134927
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8690959142950878
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9210894607691843
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.917641951358748
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9253934231817893
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8860308502738456
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8762419101774179
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8681771280810746
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8833695571027593
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8305549127253429
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.890659316710533
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8858632547606837
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8958931037589382
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8423907335792508
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9181020489979226
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9141496641533279
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9230152576422385
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8824336343637516
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9271373311127142
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9243985847213212
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9313996220474493
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8866382086506048
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8780882315864333
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.875410583228469
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8848144917269061
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7945520836528122
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8948195520510223
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.890164486559219
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9028291324735872
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8283211164613173
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9105675609074061
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9034562190855422
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9191791924203978
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8682566723452585
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9251648069169918
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9231015265060944
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9308980129932799
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8721350296615802
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8799637254424693
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.874753627516821
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8884537413358737
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8077262305396706
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9014950399517189
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8958980155826604
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9085043545107608
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8484057655829014
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9348491608155997
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9348445675778698
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9395967951341112
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8745691101340092
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9458764266555308
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9475890969175577
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9498996745710104
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8801236278672938
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8783706362381534
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8751159527018944
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8863827692809411
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7976358098870694
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8971462540583327
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8956955892016817
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9013993699825978
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8378892182038363
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9479174309636635
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9503375413871201
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.950810460860178
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8791919113061598
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9586463390665783
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9606971539008657
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9614524700365447
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.0,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8948856428286636
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.802366969355423
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7886049552819323
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8044650209409951
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7424021297151701
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8145187866983836
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8050624643520818
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8162867478623519
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.757461392849264
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8421537115128077
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8365103417583055
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8469288645920728
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7960991749489823
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8490922082888644
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8480964922969254
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.852327314876144
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 4,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8018130374098789
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8221260404743174
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8130469123999384
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8317338972457002
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7630344254864055
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8291190035200322
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8205375402302921
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8352737987163391
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.7740463398484146
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8617387903049932
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8597283971446256
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8703153498184055
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8170166523660648
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8679450115561912
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8704825170285528
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8768584647875228
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 8,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8209987511079799
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8303647767675513
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8231714332033953
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8381264377847246
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.775468869249978
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8382222473218117
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8361614738303056
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8447168158792977
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.7843708489008164
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8702384766724407
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8697943885360114
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8774786687189849
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8291398574229214
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8795838902891018
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8837064149415937
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.886435030992812
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 12,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8376523054893737
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8422381615847143
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8373581330020138
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8550433452001096
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7864795093930765
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8487975420580243
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8443649558790295
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8594025514438491
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.7980219569680238
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8911109640879452
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8936154339907305
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9002633082263914
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8538922684562771
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8999602920816124
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9096250420484877
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9071167859313044
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 16,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8595458131163828
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8529851649873552
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.849248725006535
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8674555482655836
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7990387263904237
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8607142793931923
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8603251558788212
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8731483210290427
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.809640277836418
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9046784971414424
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9085983212542652
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9153517423091084
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8686033047425812
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9137023293645891
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9222084751005258
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9219994202791724
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 20,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8768733004478908
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8514388270560946
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8478628780154712
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8679592633118192
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7963045532666527
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8653215635463437
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8682699160557702
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8809983112530627
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8091275550540955
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9116660995561543
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9167953983940168
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9263260708290901
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8735360853283415
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9204582925357009
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9304014298395161
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9323196447593156
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 22,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8807818166269848
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8489837135976682
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8496590991538924
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8708797837254214
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7857179846306578
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8687416729711241
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8726815878480999
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8855890233651138
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8114794839802837
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9068013949585623
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9150715666129627
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9227184155008217
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8632473403078351
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9170390190027862
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9281732418524873
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9304218181792895
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 24,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8739248079984755
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8526032966286643
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8568785598015416
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8736595578429147
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7894107855701322
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8710518114919028
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8750972973367035
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8902487873902258
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8134174420897212
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.926132953209332
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.936567925187886
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9376706348916605
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8858434579689802
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9384836998568279
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9508812477804127
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9539583215262443
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 26,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8955471002779215
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8519422922249972
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8523766985592948
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8750608086815801
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.7865641876823664
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8704429859948808
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8735324687226945
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.891565734164506
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_dec",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.8113679110817402
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9369723110921225
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9495445658426377
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.9518258714269141
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_linear",
+  "metric": "auroc",
+  "value": 0.8910507969373104
+ },
+ {
+  "experiment": "E2",
+  "domain": "pooled",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9490705785917232
+ },
+ {
+  "experiment": "E2",
+  "domain": "code",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9631397401863427
+ },
+ {
+  "experiment": "E2",
+  "domain": "reasoning",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9614847018951957
+ },
+ {
+  "experiment": "E2",
+  "domain": "chat",
+  "layer": 27,
+  "position": "P_tok",
+  "temperature": 0.7,
+  "model": "probe_mlp",
+  "metric": "auroc",
+  "value": 0.9073031871178587
+ }
+]

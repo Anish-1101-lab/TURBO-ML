@@ -1,0 +1,21 @@
+# Phase 5: verification-skipping gate configuration.
+#
+# FRAMING: this gate is used on "predictive is enough for a systems
+# shortcut" grounds only. Phase 4 + 4b found NO evidence that the probe's
+# direction is causally load-bearing for the target's own verification
+# computation -- see PROGRESS.md "Causal check -- final summary". Nothing
+# here implies or depends on a causal claim.
+
+probe_layer: 24          # hidden_states[24] -- output of target.model.layers[23], Phase 3 AUROC peak
+n_total_layers: 28        # Qwen2.5-7B-Instruct depth
+probe_type: mlp            # NOT linear: Phase 3 found linear ECE ~0.25-0.28 (poorly calibrated)
+                            # vs MLP ECE ~0.01-0.03 (well-calibrated) -- see probes/gate.py docstring.
+probe_checkpoint: analysis/phase3/probe_mlp_layer24.pt
+
+threshold: 0.98    # See PROGRESS.md Phase 5 "Gate design" for how this was picked
+                    # (calibrative inspection of Phase 3's reliability.json top bin) and its
+                    # limitations (coarse bin resolution -- step 2 is the real empirical test).
+
+mlp:
+  hidden_dim: 256    # must match configs/probe_config.yaml's Phase 3 training config
+  dropout: 0.1
